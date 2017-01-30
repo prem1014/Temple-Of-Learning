@@ -1,0 +1,37 @@
+<div class='row'>
+	<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
+		<div class="panel panel-default blog-title">
+            <div class="panel-heading">
+                  <h4>AngularJS Views and Directives Introduction</h4>
+            </div>
+            <div class='panel-body'>
+            	<p>Here,I will explain about angular directives and views.I will start by setting up a simple example.Create an index.html file and write the below code into your index.html file</p>
+                    <img src="images/ang-basic.png">
+                <h4><b>AngularJS Directives</b></h4>
+                <p>Angular directives are used to extend the functionality of html.AngularJS lets you extend HTML with new attributes called Directives<br><br>
+                AngularJS has a set of built-in directives which offers functionality to your applications.<br>
+                <br>
+                AngularJS directives are extended HTML attributes with the prefix <b>ng-</b>
+                </p>
+                <h4><b>Interpolation Directive</b></h4>
+                <p>
+                	Interpolation directive is one of the most frequently used angular directive.This directive is used to evalaute an expression and insert the result into an html template. A basic example is given below:-
+                </p>
+                <img src="images/interpolation.png">
+                <p>
+                    You can see a div containing a span inside it. This div element belong to controller "MyController" because i have bind this controller to the div element.
+                    Now open your index.html file into your favourite browser and you can see "Hello Inpterpolation Directive" as shown below:- 
+                </p>
+                <img src="images/index1.png">
+                <h4><b>ng-show,ng-hide and ng-if</b></h4>
+                <p>
+                     The ng-show and ng-hide directives are used to show or hide an HTML element depending on data in the model. These two directives do the same thing, but are each other's opposites.Try to modify your index.html file with below code and run it in your browser
+                </p>
+                <img src="images/show-hide.png">
+                <p>
+                    You will see that "Hello Show" is visible in your browser this is because myData.isShowIt is set true.If you set it false,"Hello Hide" will be visibile.<br><br>
+                    The same show and hide can be achived using ng-if directive.It works in the similar way like ng-show and ng-hide.Content inside ng-if will get hiden or shown depending up on the model value set to ng-if.If model valu is false,content will not be visibile and if it is true,content will be visible.Let's see the example below
+                </p>
+            </div>
+	    </div>
+</div>

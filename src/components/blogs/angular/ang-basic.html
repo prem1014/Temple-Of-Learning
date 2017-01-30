@@ -1,0 +1,106 @@
+<div class='row'>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4>A baisc understanding of Angular Js</h4>
+        </div>
+        <div class="panel-body">
+            <section>
+                <p>
+                    Angular Js is a javascripts framework and it is developed and maintained by Google.
+                    You can inlcude angular Js using html scripts tag as<br />
+                    <div class="highlighted">
+                        <span style="color:blue" ;><</span><spna>script</spna>&nbsp;<span style="color:red;">src</span><spn style="color:red;">=</spn><span style="color:blue;">"http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"</span><span style="color:blue" ;>></span><span style="color:blue" ;><</span><spn>/</spn><spna>script</spna><span style="color:blue" ;>></span>
+                    </div>
+                    You can get the Angular Js library from global repository or you can download it to your project directory and then you can include it.
+                    <br />
+                    <br />
+                    Angular Js is based on MVC patterns and hence it seperates the application into
+                    Views,Models and Controllers.
+                    <br />
+                    <b>Angular Js Life Cycle:-</b><br />
+                    It is very important to know about life cycle of any application.Here I will try to explain the life cycle of Angular Js.
+                    A good understanding of application life cycle always helps in Devloping a robust Application.
+                    <br />
+                    Usually, Angular Js application has three life cycle:
+                    The three phases occurs each time a web is loaded in the browser.
+
+                    <ol style="color:blue;">
+                        <li><b>Bootstrap Phase or Initialisation Phase</b></li>
+                        <li><b>Compilation Phase</b></li>
+                        <li><b>Runtime Data Binding Phase</b></li>
+                    </ol>
+                    <b>Bootstrap or Initialisation Phase:</b><br />
+                    The first phase of Angular Js application is bootstrap phase.This phase started as soon as you open
+                    your application in browser and Angular js library is downloaded to the browser.Once Angular Js library is
+                    downloaded, Angular initalises it's own necessary components.Now it's time to initialise your application
+                    module which you register through ng-app dirctive(Don't worry with new terms ng-app, You will get it soon in next chapter).
+                    Through ng-app your application module will be loaded and also any dependencies are injected.
+                    <br />
+                    <b>Compilation Phase:</b><br />
+                    The second phase of the Angular js life cycle is HTML compilation.Initally when a web page is loaded in the browser,
+                    a static form of the DOM is loaded in the browser.During the Angular Js compilation phase,the static DOM is replaced with
+                    dynamic DOM wich is nothing but the Angular Js View.<br />
+                    This phase actually inlcudes traversing the entire static DOM to find all Angular Js directive and Custom directive.
+                    Once it finds all the directive,it links the Angular Js directive to Javascripts code in Angular Library and custom directive
+                    to Javascripts code available your application.<br />
+                    <b>Runtime Data Binding Phase:</b><br />
+                    The final phase of the AngularJS application is the runtime phase, which exists until the user reloads or navigates away from a web page. At that point, any changes in the scope are reflected in the view, and any changes in the view are directly updated in the scope, making the scope the single source of data for the view.
+                    <br />
+                    AngularJS behaves differently from traditional methods of binding data. Traditional methods combine a template with data received from the engine and then manipulate the DOM each time the data changes. AngularJS compiles the DOM only once and then links the compiled template as necessary, making it much more efficient than traditional methods.
+                    <br /><br />
+                    <b>A Simple Hello World Example:-</b>
+                    I will try to explain MVC architecture in Angular Js uisng a very simple Hello World example.
+                    Let's do the coding
+                    <div class="helloWorld">
+                        <pre class="codeBox">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body ng-app="myapp"&gt;
+ &lt;div ng-controller="HelloController" &gt;
+  &lt;h2&gt;Hello {{helloTo.title}} !&lt;/h2&gt;
+ &lt;/div&gt;
+ &lt;script&gt;
+  var myApp=angular.module("myapp", [])
+      myApp.controller("HelloController", function($scope) {
+           $scope.helloTo = {};
+           $scope.helloTo.title = "World, AngularJS";
+        } );
+ &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<div>
+                    <br />
+                    <ol>
+                        <li>
+                            An angular js app start with defining the application name and this is done with <b>ng-app="anyAppNameYouWish"</b> (in above exapmle it is ng-app="myapp").
+                            You can have more than one application name,it depends up to you how you design your application.<br />You can include <b>ng-app(an angular built-in directive)</b>
+                            to any html element(like html,body or div).But I suggest to include it in html or body tag,this ensure that entire page belongs to that application. In Hellow World
+                            example,entire page belongs to "myapp".
+                        </li>
+                        <li>
+                            Now you are going to declare your controller using another anular built-in directive <b>ng-controller</b>.In hellow world example,it has delcared as <b>ng-controller="HelloController"</b>.
+                            Always declare your controller with a logical name(depending on it's usage).
+                        </li>
+                        <li>
+                            Now your view part is ready. It's time to register your controller. To register your controller with application <b>"myapp"</b>,you need a reference to
+                            <b>"myapp"</b>. You can get the reference with <b>var myApp=angular.module("myapp", [])</b>. Now myApp has refrence to <b>"myapp"</b> and you can register your controller using the code<br />
+                            <b>
+                                myApp.controller("HelloController", function($scope) {<br />
+                                $scope.helloTo = {};<br />
+                                $scope.helloTo.title = "World, AngularJS";<br />
+                                } );<br />
+                            </b>
+                        </li>
+                    </ol>
+
+                </p>
+            </section>
+        </div>
+    </div>
+</div>
+</div>
