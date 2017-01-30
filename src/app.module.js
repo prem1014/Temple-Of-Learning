@@ -1,3 +1,3 @@
 (function(){
-    angular.module('prem.app',['app.core']);
+    angular.module('templeOfLearning.app',['app.core']);
 })();
