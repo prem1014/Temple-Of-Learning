@@ -21,7 +21,12 @@
                 url:"/about-me",
                 templateUrl: "/src/components/about-me/aboutMe.html",
                 authenticate: false
-             })           
+             })  
+             .state("login",{
+                url:"/log-in",
+                templateUrl: "/src/components/log-in/log-in.html",
+                authenticate: false
+             })          
          // Send to login if the URL was not found
          $urlRouterProvider.otherwise("/home");
     }
