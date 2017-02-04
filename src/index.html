@@ -18,7 +18,6 @@
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    <link href="bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet" />
 
     <!-- build:css styles/lib.css -->
     <link href="/bower_components/angular-toastr/dist/angular-toastr.css" rel="stylesheet" type="text/css">
@@ -27,40 +26,52 @@
     <!-- inject:css -->
     <!-- endinject -->
     <!-- endbuild -->
+    <style>
+        
+    </style>
 </head>
 
 <body>
-<nav class="navbar navbar-inverse navbar-fixed-top main-navigation">
-<div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#" style='color: black;font-weight: bold;'>Prem Prakash</a>
+<div class="header-top-sec">
+    <div class="container"> 
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="header-top-left">
+                <ul>
+                    <li><i class="fa fa-phone" aria-hidden="true"></i><a href="Tel:+1234567890"> + 123 456 78910 </a></li>
+                    <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="#">info@templeoflearning.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="header-top-right">
+                <ul>
+                    <li>
+                        <a class="login-btn-area" href="#" id="login-button"><i class="fa fa-lock" aria-hidden="true"></i> Login</a>
+                        <div class="login-form" id="login-form" style="display: none;">
+                            <h1 class="title-default-left-bold">Login & Register</h1>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="apply-btn-area">
+                            <a href="#" class="apply-now-btn">Demo Now</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+                            
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li><a ui-sref='home'>Home</a></li>
-        <li><a ui-sref='aboutMe'>About Me</a></li>
-        <li><a ui-sref='blog'>My Blogs</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-  
-<div class="container" style="margin-top:50px" ui-view>
-
 </div>
-<div class="container-fluid jumbotron">
-<footer class='row'>
-    &copy Copyright 2017, Rights reserved.
-</footer>
+<div class='container'>
+<div class="row">
+    
+</div>
+<div class="row">
+    
+</div>
+<div class="row">
+    
+</div>
 </div>
     <!-- build:js js/lib.js -->
     <script src="/bower_components/angular/angular.js"></script>

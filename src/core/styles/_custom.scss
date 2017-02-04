@@ -1,0 +1,30 @@
+.header-top-sec{
+            width:100%; background: #002147;
+        }
+        .header-top-left {
+            margin: 7px 0;
+        }
+        .header-top-left ul li {
+            display: inline-block;
+            text-transform: lowercase;
+            font-size: 13px;
+            border-right: 1px solid #bdbdbd;
+            margin-right: 15px;
+            padding-right: 15px;
+        }
+        .header-top-left ul li i {
+            padding-right: 10px;
+            color: #fdc800;
+            font-size: 14px;
+        }
+        .header-top-left ul li a {
+            color: #d0d6dd;
+            -webkit-transition: all 0.3s ease-out;
+            -moz-transition: all 0.3s ease-out;
+            -ms-transition: all 0.3s ease-out;
+            -o-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+        }
+        .header-top-right {
+            text-align: right;
+        }
