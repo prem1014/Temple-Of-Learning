@@ -1,3 +1,3 @@
 (function(){
-    angular.module('templeOfLearning.app',['app.core']);
+    angular.module('templeOfLearning.app',['app.core','app.login']);
 })();
