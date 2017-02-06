@@ -3,7 +3,7 @@
  */
 (function () {
     angular.module('app.login',[])
-        .controller('loginController',loginController)
+        .controller('loginController',loginController);
 
     loginController.$inject=['$scope','$http'];
 

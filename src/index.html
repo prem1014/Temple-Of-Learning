@@ -26,94 +26,95 @@
     <!-- inject:css -->
     <!-- endinject -->
     <!-- endbuild -->
-    <style>
-        
-    </style>
 </head>
 
 <body>
-<<<<<<< HEAD
-</div>
-<div class='container-fluid'>
-<div class="row">
-    <div class="header-top-sec">
-    <div class="container"> 
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-            <div class="header-top-left">
-                <ul>
-                    <li><i class="fa fa-phone" aria-hidden="true"></i><a href="Tel:+1234567890"> + 123 456 78910 </a></li>
-                    <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="#">info@templeoflearning.com</a></li>
-                </ul>
+<div class="container-fluid">
+    <header class="row">
+        <div class="header-top-sec">
+            <div class="container">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="header-top-left">
+                        <ul>
+                            <li><i class="fa fa-phone" aria-hidden="true"></i><a href="Tel:+1234567890"> + 123 895456 78910 </a></li>
+                            <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="#">info@templeoflearning.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="header-top-right">
+                        <ul class="list-unstyled">
+                            <li> <a class="login-btn-area" ui-sref="login" id="login-button"><i class="fa fa-lock" aria-hidden="true"></i> Login & Register</a>
+                                <div class="login-form" id="login-form" style="display: none;">
+                                    <h1 class="title-default-left-bold">Login & Register</h1>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="apply-btn-area"> <a href="#" class="apply-now-btn">Demo Now</a> </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-            <div class="header-top-right">
-                <ul>
-                    <li>
-                        <a class="login-btn-area" href="#" id="login-button"><i class="fa fa-lock" aria-hidden="true"></i> Login</a>
-                        <div class="login-form" id="login-form" style="display: none;">
-                            <h1 class="title-default-left-bold">Login & Register</h1>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="apply-btn-area">
-                            <a href="#" class="apply-now-btn">Demo Now</a>
-                        </div>
-                    </li>
-                </ul>
+        <!-- end of Top Header Sec -->
+
+        <nav id="mainNav" class="navbar navbar-default  navbar-custom affix-top">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i> </button>
+                    <a class="navbar-brand" href="index.html"><img class="img img-responsive" src="images/logo.png"></a> </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li> <a ui-sref="home">HOME</a> </li>
+                        <li> <a href="#">ABOUT US</a> </li>
+                        <li> <a href="#">COURSES</a> </li>
+                        <li> <a href="#">FEATURES</a> </li>
+                        <li> <a href="#">TESTIMONIAL</a> </li>
+                        <li class="page-scroll"> <a href="#">CONTACT</a> </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
             </div>
-        </div>                      
-=======
-<nav class="navbar navbar-inverse navbar-fixed-top main-navigation">
-<div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#" style='color: black;font-weight: bold;'>Prem Prakash</a>
+        </nav>
+    </header>
+    <!-- end of Header Sec -->
+    <div class="row" ui-view style="margin-top: 10px;">
+
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li><a ui-sref='home'>Home</a></li>
-        <li><a ui-sref='aboutMe'>About Me</a></li>
-        <li><a ui-sref='blog'>My Blogs</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a ui-sref='login'><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
->>>>>>> master
-    </div>
+    <!-- Footer section start here -->
+    <footer class="row footer_area text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">Copyright  Temple of learning  2017. All rights reserved.</div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer section Ends here -->
 </div>
-<div class="row">
-    
-</div>
-<div class="row">
-    
-</div>
-</div>
-    <!-- build:js js/lib.js -->
-    <script src="/bower_components/angular/angular.js"></script>
-    <script src="/bower_components/angular-animate/angular-animate.js"></script>
-    <script src="/bower_components/angular-bootstrap/ui-bootstrap.js"></script>
-     <script src="/bower_components/angular-cookies/angular-cookies.min.js"></script>
-    <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-    <script src="/bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="/bower_components/angular-toastr/dist/angular-toastr.js"></script>
-    <script src="/bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
-    <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-    <script src="/bower_components/angular-cookies/angular-cookies.js"></script>
-    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="/bower_components/lodash/lodash.js"></script>
-    <!-- endbuild -->
-    <!-- build:js js/app.js -->
-    <!-- inject:js -->
-    <!-- endinject -->
-    <!-- inject:templates:js -->
-    <!-- endinject -->
-    <!-- endbuild -->
+<!-- build:js js/lib.js -->
+<script src="/bower_components/angular/angular.js"></script>
+<script src="/bower_components/angular-animate/angular-animate.js"></script>
+<script src="/bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+<script src="/bower_components/angular-cookies/angular-cookies.min.js"></script>
+<script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="/bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="/bower_components/angular-toastr/dist/angular-toastr.js"></script>
+<script src="/bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
+<script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="/bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/bower_components/lodash/lodash.js"></script>
+<!-- endbuild -->
+<!-- build:js js/app.js -->
+<!-- inject:js -->
+<!-- endinject -->
+<!-- inject:templates:js -->
+<!-- endinject -->
+<!-- endbuild -->
 </body>
 </html>

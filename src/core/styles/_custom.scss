@@ -1,30 +1,159 @@
-.header-top-sec{
-            width:100%; background: #002147;
-        }
-        .header-top-left {
-            margin: 7px 0;
-        }
-        .header-top-left ul li {
-            display: inline-block;
-            text-transform: lowercase;
-            font-size: 13px;
-            border-right: 1px solid #bdbdbd;
-            margin-right: 15px;
-            padding-right: 15px;
-        }
-        .header-top-left ul li i {
-            padding-right: 10px;
-            color: #fdc800;
-            font-size: 14px;
-        }
-        .header-top-left ul li a {
-            color: #d0d6dd;
-            -webkit-transition: all 0.3s ease-out;
-            -moz-transition: all 0.3s ease-out;
-            -ms-transition: all 0.3s ease-out;
-            -o-transition: all 0.3s ease-out;
-            transition: all 0.3s ease-out;
-        }
-        .header-top-right {
-            text-align: right;
-        }
+html, body {
+    height: 100%;
+}
+ul {
+    margin:0;
+    padding:0;
+}
+a:hover {
+    text-decoration:none;
+}
+.header-top-sec {
+    width:100%;
+    background: #174873;
+}
+.header-top-left {
+    margin: 7px 0;
+}
+.header-top-left ul li {
+    display: inline-block;
+    text-transform: lowercase;
+    font-size: 13px;
+    border-right: 1px solid #bdbdbd;
+    margin-right: 15px;
+    padding-right: 15px;
+}
+.header-top-left ul li:last-child {
+    border-right: 0;
+    padding-right: 0;
+    margin-right: 0;
+}
+.header-top-left ul li i {
+    padding-right: 10px;
+    color: #fdc800;
+    font-size: 14px;
+}
+.header-top-left ul li a {
+    color: #d0d6dd;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.header-top-right {
+    text-align: right;
+}
+.header-top-right ul li {
+    font-size: 13px;
+    padding-right: 0;
+    display: inline-block;
+    margin-left: 15px;
+    position: relative;
+}
+.header-top-right ul li .login-btn-area {
+    padding: 9px 15px;
+    display: block;
+    color: #bcc8d6;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.header-top-right ul li .login-btn-area i {
+    padding-right: 10px;
+    font-size: 14px;
+    color: #fdc800;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.apply-now-btn {
+    text-align: center;
+    color: #002147 !important;
+    padding: 8px 0;
+    width: 104px;
+    background: #fdc800;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    display: inline-block;
+    border: 2px solid #fdc800;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 0;
+    border: none;
+}
+.navbar-brand {
+    float: left;
+    height: auto;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+}
+.nav {
+    padding:10px 0;
+}
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    top: 15%;
+    left: 15%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0,0,0, .6);
+}
+.carousel-caption h3 {
+    font-size: 42px;
+    color: #e2e0e0;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.carousel-caption p{
+    color:#e2e0e0;
+    line-height:24px;
+    margin-bottom:35px;
+}
+.carousel-caption a{text-decoration:none;
+    color:#fff;
+    font-size:16px;
+    background-color:rgba(23, 72, 115, 0.9);
+    padding:10px 30px;
+}
+.about2-area {
+    padding: 50px 0;
+}
+.service-box2 .service-box-icon a {
+    border-radius: 50%;
+    height: 90px;
+    width: 90px;
+    display: block;
+    background: #eeeeee;
+    line-height: 100px;
+    margin: 0 auto;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+.service-box2 .service-box-icon a i {
+    color: #174873;
+    font-size: 36px;
+}
+footer {
+    margin: 50px 0;
+}
