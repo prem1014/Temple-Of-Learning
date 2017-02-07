@@ -26,8 +26,9 @@
                  url:"/log-in",
                  templateUrl: "/src/components/log-in/log-in.html",
                  controller:'loginController',
+                 controllerAs:'loginCtrl',
                  authenticate: false
-             })
+             });
          // Send to login if the URL was not found
          $urlRouterProvider.otherwise("/home");
     }
