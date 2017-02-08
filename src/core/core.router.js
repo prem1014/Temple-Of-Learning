@@ -17,9 +17,9 @@
                  templateUrl: "/src/components/home/home.html",
                  authenticate: false
              })
-             .state("aboutMe",{
-                url:"/about-me",
-                templateUrl: "/src/components/about-me/aboutMe.html",
+             .state("schoolReg",{
+                url:"/school-registration",
+                templateUrl: "/src/components/school-reg/school-reg.html",
                 authenticate: false
              })
              .state("login",{
