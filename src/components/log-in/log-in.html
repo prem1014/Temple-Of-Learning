@@ -1,0 +1,45 @@
+<div class="container jumbotron">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <form name="loginForm" class="form-horizontal">
+                <div class="form-group">
+                    <h4>Get access to temple of learning app</h4>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">User Id:</label>
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                        <input type="text" class="form-control" ng-model="loginCtrl.userId">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">Password:</label>
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                        <input type="password" class="form-control" ng-model="loginCtrl.password">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12"></label>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <button type="submit" class="btn btn-success" ng-click="loginCtrl.validateUser()">Login</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <form class="form-horizontal" name="signUpForm">
+                <div class="form-group">
+                    <h4>Sign Up Here</h4>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-lg-3 col-md-3 col-sm-3 col-xs-12">First Name:</label>
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
