@@ -18,7 +18,8 @@
                 <div class="form-group">
                     <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">Country:</label>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <select class="form-control">
+                        <select class="form-control"
+                        ng-options="country.id as country.name for country in schoolRegCtrl.country">
                             <option value="">--Select--</option>
                         </select>
                     </div>
