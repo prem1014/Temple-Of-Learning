@@ -18,9 +18,11 @@
                  authenticate: false
              })
              .state("schoolReg",{
-                url:"/school-registration",
-                templateUrl: "/src/components/school-reg/school-reg.html",
-                authenticate: false
+                 url:"/school-registration",
+                 templateUrl: "/src/components/school-reg/school-reg.html",
+                 controller:'schoolRegController',
+                 controllerAs:'schoolRegCtrl',
+                 authenticate: false
              })
              .state("login",{
                  url:"/log-in",
