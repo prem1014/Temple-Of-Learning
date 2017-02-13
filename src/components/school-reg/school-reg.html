@@ -1,7 +1,55 @@
-<div class="container jumbotron">
-    <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <form class="form-horizontal" name="schoolReg">
+<div class="container-fluid">
+    <div class='row inner-bradcrumb'>
+    	<div class="container">
+        	<div class="col-sm-12">
+
+                <div class="breadcrumb-part">
+                    <h3>School Registration</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li> &nbsp; - &nbsp; Registration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row main-inner_container">
+    	<div class="container">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+
+
+                            <div class="contact-us-info1">
+                                <ul>
+                                    <li>
+                                        <i class="fa fa-phone" aria-hidden="true"></i>
+                                        <h3>Phone</h3>
+                                        <p>99990005555, 8989784515</p>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                        <h3>Address</h3>
+                                        <p>B-123 Patel Garden New Delhi</p>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                        <h3>E-mail</h3>
+                                        <p>templeoflearning@gmail.com</p>
+                                    </li>
+                                    <li>
+                                        <h3>Follow Us</h3>
+                                        <ul class="contact-social">
+                                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+            <form class="form-horizontal reg-form" name="schoolReg">
                 <div class="form-group">
                     <h3>Submit below form for demo</h3>
                 </div>
@@ -20,9 +68,6 @@
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <select class="form-control"
                         ng-options="country.id as country.name for country in schoolRegCtrl.country">
-                            <option value="">--Select--</option>
-                        </select>
-                    </div>
                     <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">State:</label>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <select class="form-control">
@@ -65,6 +110,7 @@
                     </div>
                 </div>
             </form>
+        </div>
         </div>
     </div>
 </div>
