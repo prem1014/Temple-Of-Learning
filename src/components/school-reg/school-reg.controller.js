@@ -13,6 +13,7 @@
         ctrl.onCountryChange = onCountryChange;
         ctrl.onStateChange = onStateChange;
         ctrl.saveSchoolReg = saveSchoolReg;
+
         onInit();
 
         function onCountryChange() {
