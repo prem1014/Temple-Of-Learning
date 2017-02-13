@@ -133,8 +133,43 @@ a:hover {
     background-color:rgba(23, 72, 115, 0.9);
     padding:10px 30px;
 }
-.about2-area {
-    padding: 50px 0;
+.about-area {
+	padding: 50px 0;
+}
+.text-yellow{ color:#fdd136;}
+.about-title {
+	font-weight: bold;
+	font-size: 36px;
+}
+.about-area h6 {
+	margin-bottom: 50px;
+	position:relative;
+	font-size:14px;
+	color:#59595a;
+	font-weight:bold;
+}
+.about-area h6::before {
+	position: absolute;
+	width: 150px;
+	height: 1px;
+	background: #000;
+	left: 43%;
+	bottom: -18px;
+	content: "";
+}
+.about-area h6::after {
+	position: absolute;
+	left: 48%;
+	bottom: -26px;
+	font-family: FontAwesome;
+	content: "\f19d";
+	font-size: 16px;
+	width: 30px;
+	background: #fff;
+	color: #fdd136;
+}
+.about-description {
+	margin-bottom: 60px;
 }
 .service-box2 .service-box-icon a {
     border-radius: 50%;
@@ -154,6 +189,117 @@ a:hover {
     color: #174873;
     font-size: 36px;
 }
+.inner-bradcrumb {
+	background-image: url(../images/school-reg.jpg);
+	position: relative;
+	display: block;
+}
+.breadcrumb-part {
+	margin-top: 18%;
+	margin-bottom:2%;
+	color: #e2e0e0;
+}
+.breadcrumb-part h3 {
+	font-size: 30px;
+}
+.breadcrumb-part ul{ list-style:none;}
+.breadcrumb-part ul li{ display:inline-block;}
+.breadcrumb-part ul li a{ color:#fdc800;
+	font-weight:bold;}
+.main-inner_container{padding:50px 0;}
+.contact-us-info1 ul {
+	margin-top: 11px;
+	border: 1px solid #bdbdbd;
+	list-style:none;
+}
+.contact-us-info1 ul > li {
+	padding: 15px 0 8px 30px;
+	position: relative;
+	border-bottom: 1px solid #bdbdbd;
+}
+.contact-us-info1 ul > li i {
+	color: #fdd136;
+	position: absolute;
+	z-index: 1;
+	right: 30px;
+	top: 40px;
+	font-size: 24px;
+}
+.contact-us-info1 ul > li h3 {
+	text-transform: capitalize;
+	color: #174873;
+	font-size: 20px;
+	margin-bottom: 5px;
+}
+.contact-us-info1 p {
+	line-height: 1.5;
+	margin: 0 0 20px 0;
+	color:#174873;
+}
+.contact-us-info1 ul > li:last-child {
+	border-bottom: 0;
+}
+.contact-us-info1 ul > li .contact-social {
+	margin-bottom: 10px;
+	border: none;
+}
+.contact-us-info1 ul > li .contact-social li {
+	display: inline;
+	margin-right: 15px;
+	padding: 0;
+	border: none;
+}
+.contact-us-info1 ul > li .contact-social li a {
+	background: transparent;
+	border: 1px solid #002147;
+	height: 35px;
+	width: 35px;
+	line-height: 35px;
+	display: inline-block;
+	text-align: center;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
+}
+.contact-us-info1 ul > li .contact-social li a i {
+	font-size: 20px;
+	position: inherit;
+	color: #002147;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
+}
+.reg-form{}
+.reg-form h3 {
+	position: relative;
+	float: left;
+	margin-bottom: 30px;
+	color:#174873;
+}
+.reg-form h3::before {
+	background-color: #fdc800;
+	height: 2px;
+	position: absolute;
+	content: "";
+	left: 0;
+	bottom: -15px;
+	width: 90px;
+}
+
+
+
+
+
+
 footer {
-    margin: 50px 0;
+    margin: 50px 0 0;
+}
+.footer_area {
+	background-color: #174873;
+	padding: 20px 0;
+	color: #fff;
 }
