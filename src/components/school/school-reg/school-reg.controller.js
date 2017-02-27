@@ -25,7 +25,30 @@
         }
 
         function saveSchoolReg() {
-
+            var schoolDetails = {
+                schoolName:ctrl.schoolName,
+                cityName:ctrl.cityName,
+                stateName:getSateNameById(ctrl.selectedState).name,
+                districtName:getDistrictNameById(ctrl.selectedDistrict).name,
+                pinCode:ctrl.pinCode,
+                mobileNo:ctrl.mobileNo,
+                emailId:ctrl.emailId,
+                schoolUID:ctrl.schoolUID,
+                message:ctrl.message,
+                countryName:getCountryNameById(ctrl.selectedCountry).name
+            };
+            schoolRegService.saveSchoolReg(schoolDetails)
+                .then(function (res) {
+                    if(res.message==='data saved'){
+                        alert('data saved');
+                    }
+                    else {
+                        alert('errors')
+                    }
+                })
+                .catch(function (error) {
+                    alert('errors')
+                })
         }
 
         function getAllCountry() {
@@ -94,6 +117,30 @@
                     console.log('error')
                     ctrl.isSearchingDistrict =false;
                 });
+        }
+
+        function getCountryNameById(id) {
+            var countryDetails = _.find(ctrl.country,function (data) {
+                return data.id===id;
+            });
+
+            return countryDetails;
+        }
+
+        function getSateNameById(id) {
+            var stateDetails = _.find(ctrl.state,function (data) {
+                return data.id===id;
+            });
+
+            return stateDetails;
+        }
+
+        function getDistrictNameById(id) {
+            var districtDetails = _.find(ctrl.district,function (data) {
+                return data.id===id;
+            });
+
+            return districtDetails;
         }
 
         function onInit() {

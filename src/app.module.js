@@ -3,6 +3,8 @@
         'app.core',
         'app.common',
         'app.login',
-        'app.schoolReg'
+        'app.schoolReg',
+        'app.schoolList',
+        'app.dashboard'
     ]);
 })();

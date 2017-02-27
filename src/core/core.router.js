@@ -19,7 +19,7 @@
              })
              .state("schoolReg",{
                  url:"/school-registration",
-                 templateUrl: "/src/components/school-reg/school-reg.html",
+                 templateUrl: "/src/components/school/school-reg/school-reg.html",
                  controller:'schoolRegController',
                  controllerAs:'schoolRegCtrl',
                  authenticate: false
@@ -30,7 +30,21 @@
                  controller:'loginController',
                  controllerAs:'loginCtrl',
                  authenticate: false
-             });
+             })
+            .state("dashboard",{
+                url:"/dashboard",
+                templateUrl: "/src/components/dashboard/dashboard.html",
+                controller:'dashBoardController',
+                controllerAs:'dashBoardCtrl',
+                authenticate: false
+                })
+            .state("dashboard.school-reg-req",{
+            url:"/dashboard/pending-request",
+            templateUrl: "/src/components/school/school-list/school-list.html",
+            controller:'schoolListController',
+            controllerAs:'schoolListCtrl',
+            authenticate: false
+        });
          // Send to login if the URL was not found
          $urlRouterProvider.otherwise("/home");
     }

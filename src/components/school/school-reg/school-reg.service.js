@@ -12,7 +12,8 @@
         var service = {
             getCountry:getCountry,
             getStateByCountryId:getStateByCountryId,
-            getDistrictByStateId:getDistrictByStateId
+            getDistrictByStateId:getDistrictByStateId,
+            saveSchoolReg:saveSchoolReg
         };
 
         return service;
@@ -44,6 +45,18 @@
         function getDistrictByStateId(stateId) {
             var deferred = $q.defer();
             $http.get(endPointService.getEndPoint('district'+'/'+stateId))
+                .success(function (response) {
+                    deferred.resolve(response);
+                })
+                .error(function (error) {
+                    deferred.reject(error);
+                });
+            return deferred.promise;
+        }
+
+        function saveSchoolReg(schoolDetails) {
+            var deferred = $q.defer();
+            $http.post(endPointService.getEndPoint('school'),schoolDetails)
                 .success(function (response) {
                     deferred.resolve(response);
                 })
