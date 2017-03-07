@@ -1,0 +1,109 @@
+
+@media (max-width:767px){
+.profile_info {
+    width: 100% !important;
+}
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: #101010;
+    background: #222;
+}
+}
+
+#wrapper {
+    padding-left: 0;
+}
+
+#page-wrapper {
+    width: 100%;
+    padding: 0;
+    background-color: #fff;
+}
+
+.huge {
+    font-size: 50px;
+    line-height: normal;
+}
+
+@media(min-width:768px) {
+#wrapper {
+    padding-left: 225px;
+}
+
+#page-wrapper {
+    padding: 10px;
+}
+}
+
+.page-header{
+    margin: 10px 0px;
+}
+.huge{
+    margin: auto;
+    width: 60%;
+}
+/* Side Navigation */
+
+@media(min-width:768px) {
+.side-nav {
+    position: relative;
+    left: -30px;
+    width: 225px;
+    border: none;
+    border-radius: 0;
+    overflow-y: auto;
+    background-color: #222;
+    bottom: 0;
+    overflow-x: hidden;
+}
+
+.side-nav>li>a {
+    width: 225px;
+}
+
+.side-nav li a:hover,
+.side-nav li a:focus {
+    outline: none;
+    background-color: #000 !important;
+}
+}
+
+.side-nav>li>ul {
+    padding: 0;
+}
+
+.side-nav>li>ul>li>a {
+    display: block;
+    padding: 10px 15px 10px 38px;
+    text-decoration: none;
+    color: #999;
+}
+
+.side-nav>li>ul>li>a:hover {
+    color: #fff;
+}
+.navbar-inverse .navbar-brand {
+    color: #fff;
+    text-align: center;
+    background: #3bafda;
+    width: 225px;
+}
+.navbar-inverse {
+    background-color: #4fc1e9;
+    border-color: #080808;
+}
+.navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:hover {
+    color: #fff;
+    background-color: #3bafda;
+}
+.profile_info {
+    width: 225px;
+    text-align: left;
+    padding: 20px 0;
+    color: #ffffff;
+}
+.user_pic {
+    width: 40px;
+    float: left;
+    margin-right: 15px;
+}
+.profile_info i{color:#2ac750}

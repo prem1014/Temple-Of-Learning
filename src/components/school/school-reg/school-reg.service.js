@@ -13,7 +13,8 @@
             getCountry:getCountry,
             getStateByCountryId:getStateByCountryId,
             getDistrictByStateId:getDistrictByStateId,
-            saveSchoolReg:saveSchoolReg
+            saveSchoolReg:saveSchoolReg,
+            getAllSchool:getAllSchool
         };
 
         return service;
@@ -57,6 +58,18 @@
         function saveSchoolReg(schoolDetails) {
             var deferred = $q.defer();
             $http.post(endPointService.getEndPoint('school'),schoolDetails)
+                .success(function (response) {
+                    deferred.resolve(response);
+                })
+                .error(function (error) {
+                    deferred.reject(error);
+                });
+            return deferred.promise;
+        }
+
+        function getAllSchool() {
+            var deferred = $q.defer();
+            $http.get(endPointService.getEndPoint('school'))
                 .success(function (response) {
                     deferred.resolve(response);
                 })
