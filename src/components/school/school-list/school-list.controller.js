@@ -11,13 +11,37 @@
     	var ctrl = this;
 
     	ctrl.approve = approve;
+    	ctrl.reject = reject;
 
     	onInit();
 
-    	function approve(event){
+    	function approve(event,index){
     		event.preventDefault();
-    		
+    		var requestData = {
+    		    schoolId:ctrl.schoolList[index]._id,
+                status:'Approved'
+            };
+            schoolRegService.approveRequest(requestData)
+                .then(function (response) {
+                    if(response.data === 'success'){
+                        alert('request approved');
+                    }
+                })
     	}
+
+        function reject(event,index){
+            event.preventDefault();
+            var requestData = {
+                schoolId:ctrl.schoolList[index]._id,
+                status:'Approved'
+            };
+            schoolRegService.rejectRequest(requestData)
+                .then(function (response) {
+                    if(response.data === 'success'){
+                        alert('request rejected');
+                    }
+                })
+        }
 
     	function getAllSchool(){
     		schoolRegService.getAllSchool()

@@ -14,7 +14,10 @@
             getStateByCountryId:getStateByCountryId,
             getDistrictByStateId:getDistrictByStateId,
             saveSchoolReg:saveSchoolReg,
-            getAllSchool:getAllSchool
+            getAllSchool:getAllSchool,
+            approveRequest:approveRequest,
+            rejectRequest:rejectRequest
+
         };
 
         return service;
@@ -75,6 +78,32 @@
                 })
                 .error(function (error) {
                     deferred.reject(error);
+                });
+            return deferred.promise;
+        }
+
+        function approveRequest(requestData) {
+            var deferred = $q.defer();
+
+            $http.put(endPointService.getEndPoint('school'),requestData)
+                .success(function (response) {
+                    deferred.resolve(response);
+                })
+                .error(function (error) {
+                    deferred.reject(error)
+                });
+            return deferred.promise;
+        }
+
+        function rejectRequest(requestData) {
+            var deferred = $q.defer();
+
+            $http.put(endPointService.getEndPoint('school'),requestData)
+                .success(function (response) {
+                    deferred.resolve(response);
+                })
+                .error(function (error) {
+                    deferred.reject(error)
                 });
             return deferred.promise;
         }
