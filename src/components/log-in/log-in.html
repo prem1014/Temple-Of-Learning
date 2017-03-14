@@ -33,25 +33,37 @@
                 <div class="form-group">
                     <label class="control-label col-lg-3 col-md-3 col-sm-3 col-xs-12">School Id:</label>
                     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                        <input type="text" class="form-control" ng-model="loginCtrl.schoolid">
+                        <div class="input-group">
+                             <input type="text" class="form-control" ng-model="loginCtrl.schoolDetails._id">
+                            <span class="input-group-addon" ng-click="loginCtrl.getSchoolDetailsById()" style="cursor: pointer;">
+                                  <i class="glyphicon glyphicon-search"></i>
+                             </span>
+                        </div>
                     </div>
+
                 </div>
                 <div class="form-group">
                     <label class="control-label col-lg-3 col-md-3 col-sm-3 col-xs-12">School Name:</label>
                     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                        <input type="text" class="form-control" ng-model="loginCtrl.schoolname">
+                        <input type="text" class="form-control" ng-model="loginCtrl.schoolDetails.schoolName">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label col-lg-3 col-md-3 col-sm-3 col-xs-12">Mobile No.:</label>
-                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12" ng-model="loginCtrl.mobileno">
-                        <input type="text" class="form-control">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                        <input type="text" class="form-control" ng-model="loginCtrl.schoolDetails.mobileNo">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-lg-3 col-md-3 col-sm-3 col-xs-12">Status.:</label>
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                        <input type="text" class="form-control" ng-model="loginCtrl.schoolDetails.currentStatus">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label col-lg-3 col-md-3 col-sm-3 col-xs-12">Enter Password:</label>
                     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                        <input type="password" class="form-control" ng-model="loginCtrl.signUpPassword">
+                        <input type="password" class="form-control" ng-model="loginCtrl.schoolDetails.password">
                     </div>
                 </div>
                 <div class="form-group">
@@ -63,8 +75,15 @@
                 <div class="form-group">
                     <label class="control-label col-lg-3 col-md-3 col-sm-3 col-xs-12"></label>
                     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                        <button type="submit" class="btn btn-success" ng-click="loginCtrl.validateUser()">Sign Up</button>
+                        <button type="submit" class="btn btn-success" ng-click="loginCtrl.signUp()"
+                        ng-disabled="loginCtrl.schoolDetails.currentStatus==='pending'">Sign Up</button>
                     </div>
+                </div>
+                <div class='form-group' ng-if="loginCtrl.schoolDetails.currentStatus==='pending'">
+                     <div class="alert alert-warning alert-dismissable">
+                         <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                         <strong>Warning!</strong> Your request is still pending. Please ask administration team to approve it.
+                     </div>
                 </div>
             </form>
         </div>

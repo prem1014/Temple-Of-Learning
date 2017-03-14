@@ -13,13 +13,14 @@
     </thead>
     <tbody>
       <tr ng-repeat='(index,school) in schoolListCtrl.schoolList'>
-        <td>{{school.schoolUID}}</td>
+        <td>{{school._id}}</td>
         <td>{{school.schoolName}}</td>
         <td>{{school.districtName}}</td>
         <td>{{school.stateName}}</td>
         <td>{{school.currentStatus}}</td>
-        <td><a href='#' ng-click='schoolListCtrl.approve()'>Approve</a><td>
-        <td><a href='#' ng-click='schoolListCtrl.reject()'>Reject</a><td>
+        <td><a href='#' ng-click='schoolListCtrl.approve($event,index)'>Approve</a><td>
+        <td><a href='#' ng-click='schoolListCtrl.reject($event,index)'>Reject</a><td>
+        <td><a href='#' ng-click='schoolListCtrl.deleteReq($event,index)'>Delete</a><td>
       </tr>
     </tbody>
   </table>
