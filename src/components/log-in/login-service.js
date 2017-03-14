@@ -10,7 +10,9 @@
 
     function loginService($http,$q,endPointService) {
         var service={
-            validateUser:validateUser
+            validateUser:validateUser,
+            getSchoolDetailsById:getSchoolDetailsById,
+            saveSchoolSignUpDetails:saveSchoolSignUpDetails
         };
 
         return service;
@@ -24,6 +26,32 @@
                 .error(function (error) {
                     deferred.reject(error);
                 });
+        }
+
+        function getSchoolDetailsById(id) {
+            var deferred = $q.defer();
+            $http.get(endPointService.getEndPoint('school'+'/'+id))
+                .success(function (res) {
+                    console.log(res);
+                    deferred.resolve(res);
+                })
+                .catch(function (error) {
+                    deferred.reject(error);
+                });
+            return deferred.promise;
+        }
+
+        function saveSchoolSignUpDetails(signUpDetails) {
+            var deferred = $q.defer();
+            $http.post(endPointService.getEndPoint('login'),signUpDetails)
+                .success(function (res) {
+                    console.log(res);
+                    deferred.resolve(res);
+                })
+                .catch(function (error) {
+                    deferred.reject(error);
+                });
+            return deferred.promise;
         }
     }
 })();

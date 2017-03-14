@@ -15,45 +15,39 @@
     	ctrl.saveStudentDetails = saveStudentDetails;
         ctrl.onCountryChange = onCountryChange;
         ctrl.onStateChange = onStateChange;
+        ctrl.onDistrictChange = onDistrictChange;
 
         onInit();
 
     	function saveStudentDetails(){
+            ctrl.studentDetails.schoolName = 'K N sharama'
     		studentRegService.saveStudentDetails(ctrl.studentDetails)
     		   .then(function(response){
+                   alert('data saved')
+    		   })
+            }
 
-    		   })}
-               function getAllCountry() {
-            ctrl.isSearchingCountry = true;
-            schoolRegService.getCountry()
-                .then(function (response) {
-                    _.forEach(response,function (data) {
-                        if(data.countryName!==null){
-                            ctrl.country.push(
-                                {
-                                    id:data._id,
-                                    name:data.countryName
-                                }
-                            )
-                        }
-                        ctrl.isSearchingCountry = false;
-                    });
-                })
-                .catch(function (error) {
-                    console.log('error')
-                    ctrl.isSearchingCountry = false;
-                });
-        
-    	}
 
         function onCountryChange() {
             getStateByCountryId();
+
+           ctrl.studentDetails.countryName = getFilteredDataById(ctrl.country,ctrl.studentDetails.selectedCountryId)[0].name;
         }
 
+        function onDistrictChange(){
+              ctrl.studentDetails.districtName = getFilteredDataById(ctrl.district,ctrl.studentDetails.selectedDistrictId)[0].name;
+        }
         function onStateChange() {
             getDistrictByStateId();
+            ctrl.studentDetails.stateName = getFilteredDataById(ctrl.state,ctrl.studentDetails.selectedStateId)[0].name;
         }
 
+        function getFilteredDataById(dataToFiltered,id){
+           var filtererdCountry= _.filter(dataToFiltered,function(data){
+                return data.id===id;
+            });
+           return filtererdCountry;
+        }
         function getAllCountry() {
             ctrl.isSearchingCountry = true;
             schoolRegService.getCountry()
@@ -79,7 +73,7 @@
         function getStateByCountryId() {
             ctrl.state = [];
             ctrl.isSearchingState = true;
-            schoolRegService.getStateByCountryId(ctrl.studentDetails.selectedCountry)
+            schoolRegService.getStateByCountryId(ctrl.studentDetails.selectedCountryId)
                 .then(function (response) {
                     _.forEach(response,function (data) {
                         if(data.stateName!==null){
@@ -102,7 +96,7 @@
         function getDistrictByStateId() {
             ctrl.district = [];
             ctrl.isSearchingDistrict = true;
-            schoolRegService.getDistrictByStateId(ctrl.studentDetails.selectedState)
+            schoolRegService.getDistrictByStateId(ctrl.studentDetails.selectedStateId)
                 .then(function (response) {
                     _.forEach(response,function (data) {
                         if(data.districtName!==null){

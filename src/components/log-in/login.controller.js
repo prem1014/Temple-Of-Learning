@@ -30,5 +30,24 @@
                 password:ctrl.signUpPassword
             }
         }
+
+        function getSchoolDetailsById() {
+            loginService.getSchoolDetailsById(ctrl.schoolDetails._id)
+                .then(function (response) {
+                  ctrl.schoolDetails = response[0];
+                })
+                .catch(function (error) {
+
+                })
+        }
+
+        function signUp() {
+            loginService.saveSchoolSignUpDetails(ctrl.schoolDetails)
+                .then(function (response) {
+                    if(response.message==='success'){
+                        alert('You have registered')
+                    }
+                })
+        }
     }
 })();
