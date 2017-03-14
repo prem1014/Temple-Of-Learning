@@ -19,12 +19,11 @@
             var deferred = $q.defer();
             $http.get(endPointService.getEndPoint('login'+'/'+id))
                 .success(function (res) {
-                    console.log(res);
                     deferred.resolve(res);
                 })
-                .catch(function (error) {
+                .error(function (error) {
                     deferred.reject(error);
-                })
+                });
         }
     }
 })();

@@ -39,12 +39,20 @@
                 authenticate: false
                 })
             .state("dashboard.school-reg-req",{
-            url:"/dashboard/pending-request",
+            url:"/pending-request",
             templateUrl: "/src/components/school/school-list/school-list.html",
             controller:'schoolListController',
             controllerAs:'schoolListCtrl',
             authenticate: false
-        });
+        })
+            .state("dashboard.student-reg",{
+                url:"/student-reg",
+                templateUrl: "/src/components/student/student-reg.html",
+                controller:'studentRegController',
+                controllerAs:'studentRegCtrl',
+                authenticate: false
+            });
+
          // Send to login if the URL was not found
          $urlRouterProvider.otherwise("/home");
     }

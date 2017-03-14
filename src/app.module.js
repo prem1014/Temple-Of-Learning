@@ -5,6 +5,7 @@
         'app.login',
         'app.schoolReg',
         'app.schoolList',
-        'app.dashboard'
+        'app.dashboard',
+        'app.student'
     ]);
 })();

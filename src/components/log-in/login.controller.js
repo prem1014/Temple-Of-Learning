@@ -11,9 +11,24 @@
         var ctrl=this;
 
         ctrl.validateUser=validateUser;
+        ctrl.signUp = signUp;
+        ctrl.getSchoolDetailsById = getSchoolDetailsById;
 
         function validateUser() {
-            loginService.validateUser(ctrl.userId);
+            loginService.validateUser(ctrl.userId)
+                .then(function () {
+
+                })
+                .catch(function (error) {
+
+                })
+        }
+
+        function signUp() {
+            var signUpDetails = {
+                schoolId:ctrl.schoolid,
+                password:ctrl.signUpPassword
+            }
         }
     }
 })();
