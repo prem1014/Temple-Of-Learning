@@ -5,13 +5,20 @@
     angular.module('app.dashboard',[])
         .controller('dashBoardController',dashBoardController);
 
-    dashBoardController.$inject = ['$scope','schoolRegService'];
+    dashBoardController.$inject = ['$rootScope','$scope','$state','schoolRegService','loginService'];
 
-    function dashBoardController($scope,schoolRegService) {
+    function dashBoardController($rootScope,$scope,$state,schoolRegService,loginService) {
         var ctrl = this;
+
+        ctrl.logOut = logOut;
 
         onInit();
 
+        function logOut(){
+            loginService.logOut();
+            $rootScope.userCredentials = {};
+            $state.go('login');
+        }
         function getTotalSchoolCountWithPending() {
             ctrl.pendingRegReq = [];
             _.forEach(ctrl.allRegisteredSchool,function (allRegisteredSchool) {

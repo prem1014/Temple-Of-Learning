@@ -71,7 +71,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li> <a ui-sref="home">HOME</a> </li>
                         <li> <a href="#">ABOUT US</a> </li>
-                        <li> <a ui-sref="dashboard">Dashboard</a> </li>
+                        <li ng-if="userCredentials.userName!==undefined"> <a ui-sref="dashboard">DASHBOARD</a> </li>
                         <li> <a href="#">FEATURES</a> </li>
                         <li> <a href="#">TESTIMONIAL</a> </li>
                         <li class="page-scroll"> <a href="#">CONTACT</a> </li>
@@ -83,7 +83,7 @@
     </header>
     <!-- end of Header Sec -->
     <div class="row" ui-view style="margin-top: 0px;">
-
+ 
     </div>
     <!-- Footer section start here -->
     <footer class="row footer_area text-center">

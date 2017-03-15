@@ -5,9 +5,9 @@
     angular.module('app.login')
         .controller('loginController',loginController);
 
-    loginController.$inject=['loginService'];
+    loginController.$inject=['$state','$rootScope','$cookieStore','loginService'];
 
-    function loginController(loginService) {
+    function loginController($state,$rootScope,$cookieStore,loginService) {
         var ctrl=this;
 
         ctrl.validateUser=validateUser;
@@ -16,8 +16,13 @@
 
         function validateUser() {
             loginService.validateUser(ctrl.userId)
-                .then(function () {
-
+                .then(function (response) {
+                    console.log(response);
+                    if(response[0].password === ctrl.password){
+                        loginService.setUserCredentials(response[0].userName);
+                        $rootScope.userCredentials = $cookieStore.get('userCredentials') || {};
+                        $state.go('dashboard')
+                    }
                 })
                 .catch(function (error) {
 

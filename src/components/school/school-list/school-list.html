@@ -12,7 +12,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat='(index,school) in schoolListCtrl.schoolList'>
+      <tr ng-repeat='(index,school) in schoolListCtrl.schoolList' ng-if="school.currentStatus==='pending'">
         <td>{{school._id}}</td>
         <td>{{school.schoolName}}</td>
         <td>{{school.districtName}}</td>

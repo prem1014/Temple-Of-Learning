@@ -5,9 +5,9 @@
     angular.module('app.schoolReg',[])
         .controller('schoolRegController',schoolRegController);
 
-    schoolRegController.$inject=['$scope','schoolRegService'];
+    schoolRegController.$inject=['$scope','$state','schoolRegService'];
 
-    function schoolRegController($scope,schoolRegService) {
+    function schoolRegController($scope,$state,schoolRegService) {
         var ctrl = this;
 
         ctrl.onCountryChange = onCountryChange;
