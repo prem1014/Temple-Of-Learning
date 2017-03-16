@@ -7,14 +7,18 @@
                     <ul class="nav navbar-nav side-nav">
                         <li class="">
                             <div class="profile_info"> <img class="img img-circle user_pic" src="images/user_pic.ico">
-                                <div class="profile-title">{{userCredentials.userName}}</div>
+                                <div class="profile-title"><span>{{userCredentials.userName}}</span></div>
                                 <div class="status"><i class="fa fa-circle" aria-hidden="true"></i> Online
                                     <a href='#' class='btn btn-info' ng-click='dashBoardCtrl.logOut($event)'>Logout</a>
                                 </div>
                             </div>
                         </li>
                         <li class="active"> <a ui-sref="dashboard"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a> </li>
-                        <li class="active"> <a ui-sref="dashboard.school-reg-req"><i class="fa fa-bell"></i>Request Pending</a> </li>
+                        <li class="active">
+                             <a ui-sref="dashboard.school-reg-req">
+                                Request Pending <span class='badge' style='background-color: red'>{{dashBoardCtrl.pendingRegReq.length}}</span>
+                             </a>
+                         </li>
                         <li class="active">
                             <a ui-sref="dashboard.student-reg">
                                 <i class="fa fa-bell"></i>
