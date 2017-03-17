@@ -10,7 +10,8 @@
 
     function studentRegService($http,$q,endPointService) {
         var service = {
-            saveStudentDetails:saveStudentDetails
+            saveStudentDetails:saveStudentDetails,
+            getAllStudents:getAllStudents
         };
 
         return service;
@@ -27,5 +28,16 @@
             return deferred.promise;
         }
 
+        function getAllStudents(){
+            var deferred = $q.defer();
+            $http.get(endPointService.getEndPoint('student'))
+                .success(function (response) {
+                    deferred.resolve(response);
+                })
+                .error(function (error) {
+                    deferred.reject(error);
+                });
+            return deferred.promise;            
+        }
     }
 })();

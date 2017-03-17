@@ -7,9 +7,9 @@
         .controller('studentRegController',studentRegController);
 
    
-    studentRegController.$inject=['studentRegService','schoolRegService'];
+    studentRegController.$inject=['$state','studentRegService','schoolRegService'];
 
-    function studentRegController(studentRegService,schoolRegService) {
+    function studentRegController($state,studentRegService,schoolRegService) {
     	var ctrl =this;
 
     	ctrl.saveStudentDetails = saveStudentDetails;
@@ -23,7 +23,8 @@
             ctrl.studentDetails.schoolName = 'K N sharama'
     		studentRegService.saveStudentDetails(ctrl.studentDetails)
     		   .then(function(response){
-                   alert('data saved')
+                   alert('data saved');
+                   $state.go('dashboard');
     		   })
             }
 
