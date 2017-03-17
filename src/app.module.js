@@ -6,6 +6,7 @@
         'app.schoolReg',
         'app.schoolList',
         'app.dashboard',
-        'app.teachers'
+        'app.teachers',
+        'app.student'
     ]);
 })();

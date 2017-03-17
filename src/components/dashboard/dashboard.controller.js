@@ -5,12 +5,35 @@
     angular.module('app.dashboard',[])
         .controller('dashBoardController',dashBoardController);
 
-    dashBoardController.$inject = ['$scope','schoolRegService'];
+    dashBoardController.$inject = ['$rootScope','$scope','$state','schoolRegService','loginService','studentRegService'];
 
-    function dashBoardController($scope,schoolRegService) {
+    function dashBoardController($rootScope,$scope,$state,schoolRegService,loginService,studentRegService) {
         var ctrl = this;
 
+        ctrl.logOut = logOut;
+
         onInit();
+
+        function logOut(){
+            loginService.logOut();
+            $rootScope.userCredentials = {};
+            $state.go('login');
+        }
+
+        function getAllSchool(){
+            schoolRegService.getAllSchool()
+                .then(function (response) {
+                    ctrl.allRegisteredSchool = response;
+                    getTotalSchoolCountWithPending();
+                })            
+        }
+
+        function getAllStudents(){
+            studentRegService.getAllStudents()
+                .then(function (response) {
+                    ctrl.allStudents = response;
+                })            
+        }
 
         function getTotalSchoolCountWithPending() {
             ctrl.pendingRegReq = [];
@@ -22,12 +45,10 @@
                 }
             })
         }
+
         function onInit() {
-            schoolRegService.getAllSchool()
-                .then(function (response) {
-                    ctrl.allRegisteredSchool = response;
-                    getTotalSchoolCountWithPending();
-                })
+             getAllSchool();
+             getAllStudents();
         }
     }
 })();

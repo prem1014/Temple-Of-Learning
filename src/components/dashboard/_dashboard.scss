@@ -51,7 +51,7 @@
     border: none;
     border-radius: 0;
     overflow-y: auto;
-    background-color: #222;
+    background-color: #f8f8f8;
     bottom: 0;
     overflow-x: hidden;
 }
@@ -107,3 +107,18 @@
     margin-right: 15px;
 }
 .profile_info i{color:#2ac750}
+.profile-title span{
+    color:black;
+}
+
+.badge{
+    font-weight: bold;
+    font-size:14px;
+}
+
+.school-reg{
+    background-color:#FF5722;
+}
+.student-list{
+    background-color:#FF9800;
+}

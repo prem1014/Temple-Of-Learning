@@ -6,7 +6,7 @@ runAppCore.$inject=['$rootScope','$state', '$location','$cookieStore']
 
 	function runAppCore($rootScope,$state, $location,$cookieStore){
 		        // keep user logged in after page refresh
-	    $rootScope.userDetails = $cookieStore.get('userDetails') || {};
+	    $rootScope.userCredentials = $cookieStore.get('userCredentials') || {};
 
 		/*$rootScope.$on('$locationChangeStart', function (event, next, current) {
             // redirect to login page if not logged in
@@ -18,7 +18,7 @@ runAppCore.$inject=['$rootScope','$state', '$location','$cookieStore']
             }
         });*/
   $rootScope.$on("$stateChangeStart", function(event, toState, toParams, fromState, fromParams){
-    if (toState.authenticate && !$rootScope.userDetails.userName){
+    if (toState.authenticate && !$rootScope.userCredentials.userName){
       // User isn’t authenticated
       $state.transitionTo("login");
       event.preventDefault(); 

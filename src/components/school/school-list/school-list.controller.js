@@ -12,6 +12,7 @@
 
     	ctrl.approve = approve;
     	ctrl.reject = reject;
+        ctrl.deleteReq = deleteReq;
 
     	onInit();
 
@@ -19,12 +20,13 @@
     		event.preventDefault();
     		var requestData = {
     		    schoolId:ctrl.schoolList[index]._id,
-                status:'Approved'
+                currentStatus:'Approved'
             };
             schoolRegService.approveRequest(requestData)
                 .then(function (response) {
-                    if(response.data === 'success'){
+                    if(response.message === 'success'){
                         alert('request approved');
+                        getAllSchool();
                     }
                 })
     	}
@@ -33,14 +35,26 @@
             event.preventDefault();
             var requestData = {
                 schoolId:ctrl.schoolList[index]._id,
-                status:'Approved'
+                currentStatus:'Rejected'
             };
             schoolRegService.rejectRequest(requestData)
                 .then(function (response) {
-                    if(response.data === 'success'){
+                    if(response.message === 'success'){
                         alert('request rejected');
+                        getAllSchool();
                     }
                 })
+        }
+
+        function deleteReq(event,index){
+            event.preventDefault();
+            schoolRegService.deleteReq(ctrl.schoolList[index]._id)
+                 .then(function(response){
+                    if(response.message === 'success'){
+                        alert('Data deleted');
+                        getAllSchool();
+                    }
+                 });
         }
 
     	function getAllSchool(){
@@ -49,6 +63,7 @@
     			ctrl.schoolList = response;
     		})
     	}
+
     	function onInit(){
     		getAllSchool();
     	}

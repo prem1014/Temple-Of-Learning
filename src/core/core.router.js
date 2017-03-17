@@ -36,10 +36,10 @@
                 templateUrl: "/src/components/dashboard/dashboard.html",
                 controller:'dashBoardController',
                 controllerAs:'dashBoardCtrl',
-                authenticate: false
+                authenticate: true
                 })
             .state("dashboard.school-reg-req",{
-            url:"/dashboard/pending-request",
+            url:"/pending-request",
             templateUrl: "/src/components/school/school-list/school-list.html",
             controller:'schoolListController',
             controllerAs:'schoolListCtrl',
@@ -52,6 +52,14 @@
                 controllerAs:'teacherRegCtrl',
                 authenticate:false
             })
+            .state("dashboard.student-reg",{
+                url:"/student-reg",
+                templateUrl: "/src/components/student/student-reg.html",
+                controller:'studentRegController',
+                controllerAs:'studentRegCtrl',
+                authenticate: true
+            });
+
          // Send to login if the URL was not found
          $urlRouterProvider.otherwise("/home");
     }
