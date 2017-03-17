@@ -3,7 +3,7 @@
  */
 (function () {
     'use strict';
-    angular.module('app.schoolReg')
+    angular.module('app.school')
         .factory('schoolRegService',schoolRegService);
 
     schoolRegService.$inject = ['$http','$q','endPointService'];

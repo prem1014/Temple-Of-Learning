@@ -2,7 +2,7 @@
  * Created by prem on 2/15/2017.
  */
 (function () {
-    angular.module('app.schoolList',[])
+    angular.module('app.school')
         .controller('schoolListController',schoolListController);
 
     schoolListController.$inject = ['$scope','schoolRegService'];

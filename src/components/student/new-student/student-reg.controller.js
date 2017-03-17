@@ -3,7 +3,7 @@
  */
 
 (function () {
-    angular.module('app.student',[])
+    angular.module('app.student')
         .controller('studentRegController',studentRegController);
 
    

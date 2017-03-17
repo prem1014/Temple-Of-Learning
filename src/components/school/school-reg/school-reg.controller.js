@@ -2,7 +2,7 @@
  * Created by prem on 2/4/2017.
  */
 (function () {
-    angular.module('app.schoolReg',[])
+    angular.module('app.school')
         .controller('schoolRegController',schoolRegController);
 
     schoolRegController.$inject=['$scope','$state','schoolRegService'];
@@ -76,7 +76,7 @@
         function getStateByCountryId() {
             ctrl.state = [];
             ctrl.isSearchingState = true;
-            schoolRegService.getStateByCountryId(ctrl.selectedCountry)
+            schoolRegService.getStateByCountryId(ctrl.country.selectedCountry)
                 .then(function (response) {
                     _.forEach(response,function (data) {
                         if(data.stateName!==null){
