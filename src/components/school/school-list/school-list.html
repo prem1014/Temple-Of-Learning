@@ -1,0 +1,27 @@
+<div class='row'>
+	<h4>Pending Request For School Registration</h4>
+	<div class='col-lg-12 col-md-12 col-sm-12'>
+		<table class="table table-hover">
+    <thead>
+      <tr>
+        <th>School Id</th>
+        <th>School Name</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat='(index,school) in schoolListCtrl.schoolList'>
+        <td>{{school.schoolUID}}</td>
+        <td>{{school.schoolName}}</td>
+        <td>{{school.districtName}}</td>
+        <td>{{school.stateName}}</td>
+        <td>{{school.currentStatus}}</td>
+        <td><a href='#' ng-click='schoolListCtrl.approve()'>Approve</a><td>
+        <td><a href='#' ng-click='schoolListCtrl.reject()'>Reject</a><td>
+      </tr>
+    </tbody>
+  </table>
+	</div>
+</div>

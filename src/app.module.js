@@ -2,6 +2,10 @@
     angular.module('templeOfLearning.app',[
         'app.core',
         'app.common',
-        'app.login'
+        'app.login',
+        'app.schoolReg',
+        'app.schoolList',
+        'app.dashboard',
+        'app.teachers'
     ]);
 })();
