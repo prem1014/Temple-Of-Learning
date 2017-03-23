@@ -1,0 +1,51 @@
+<div class='form-group'>
+	<label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">Country:</label>
+	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+		 <select class="form-control" ng-model="vm.personalData.country.selectedCountryId" required ng-change="vm.onCountryChange()"
+             ng-options="country.id as country.name for country in vm.personalData.country.allCountry">
+             <option value="">--Select--</option>
+         </select>
+	</div>
+	<label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">State:</label>
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+         <select class="form-control" ng-model="vm.personalData.state.selectedStateId" required ng-change="vm.onStateChange()"
+                 ng-options="state.id as state.name for state in vm.personalData.state.allState">
+                 <option value="">--Select--</option>
+         </select>           
+        <span ng-if="schoolRegCtrl.isSearchingState" class="glyphicon glyphicon-refresh glyphicon-spin"></span>
+        </div>
+</div>
+<div class="form-group">
+     <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">District:</label>
+     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+          <select class="form-control" ng-model="vm.personalData.district.selectedDistrictId" required ng-change="vm.onDistrictChange()"
+              ng-options="district.id as district.name for district in vm.personalData.district.allDistrict">
+              <option value="">--Select--</option>
+          </select>
+          <span ng-if="schoolRegCtrl.isSearchingState" class="glyphicon glyphicon-refresh glyphicon-spin"></span>
+     </div>
+     <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">City:</label>
+     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+          <input type="text" ng-model="vm.personalData.cityName" class="form-control" placeholder="enter your city name"/>
+     </div>
+</div>
+<div class="form-group">
+    <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">Mobile:</label>
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <input type="text" ng-model="vm.personalData.mobileNo" class="form-control" placeholder="enter your mobile no" required/>
+    </div>
+    <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">Email:</label>
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <input type="email" ng-model="vm.personalData.emailId" class="form-control" placeholder="enter your email id" required/>
+    </div>
+</div>
+<div class="form-group">
+    <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">Pin Code:</label>
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <input type="text" ng-model="vm.personalData.pinCode" class="form-control" placeholder="enter your pin code"/>
+    </div>
+    <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">Address:</label>
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <textarea class="form-control" ng-model="vm.personalData.address"></textarea>
+    </div>
+</div>
