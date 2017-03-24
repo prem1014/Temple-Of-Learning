@@ -6,6 +6,7 @@
         'app.school',
         'app.dashboard',
         'app.student',
-        'app.widgets'
+        'app.widgets',
+        'app.finance'
     ]);
 })();
