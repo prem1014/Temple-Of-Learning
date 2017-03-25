@@ -56,71 +56,24 @@
                 <div class="form-group">
                     <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">School Name:</label>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <input type="text" class="form-control" ng-model="schoolRegCtrl.schoolName"  required/>
+                        <input type="text" class="form-control" ng-model="schoolRegCtrl.schoolDetails.schoolName"  required/>
                     </div>
                     <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">Enter Id:</label>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <input type="text" class="form-control" ng-model="schoolRegCtrl.schoolUID" required placeholder="Choose unique id for your school"/>
+                        <input type="text" class="form-control" ng-model="schoolRegCtrl.schoolDetails.schoolUID" required placeholder="Choose unique id for your school"/>
                     </div>
                 </div>
+                <personal-information personal-data='schoolRegCtrl.personalInfo'></personal-information>
                 <div class="form-group">
-                    <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">Country:</label>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <select class="form-control" ng-model="schoolRegCtrl.selectedCountry" required
-                                ng-change="schoolRegCtrl.onCountryChange()"
-                                ng-options="country.id as country.name for country in schoolRegCtrl.country">
-                             <option value="">--Select--</option>
-                        </select>
-                        <span ng-if="schoolRegCtrl.isSearchingCountry" class="glyphicon glyphicon-refresh glyphicon-spin"></span>
-                    </div>
-                    <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">State:</label>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <select class="form-control" ng-model="schoolRegCtrl.selectedState" required
-                            ng-change="schoolRegCtrl.onStateChange()"
-                            ng-options="state.id as state.name for state in schoolRegCtrl.state">
-                            <option value="">--Select--</option>
-                        </select>
-                        <span ng-if="schoolRegCtrl.isSearchingState" class="glyphicon glyphicon-refresh glyphicon-spin"></span>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">District:</label>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <select class="form-control" ng-model="schoolRegCtrl.selectedDistrict" required
-                            ng-options="district.id as district.name for district in schoolRegCtrl.district">
-                            <option value="">--Select--</option>
-                        </select>
-                        <span ng-if="schoolRegCtrl.isSearchingState" class="glyphicon glyphicon-refresh glyphicon-spin"></span>
-                    </div>
-                    <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">City:</label>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <input type="text" ng-model="schoolRegCtrl.cityName" class="form-control" placeholder="enter your city name"/>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">Mobile:</label>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <input type="text" ng-model="schoolRegCtrl.mobileNo" class="form-control" placeholder="enter your mobile no" required/>
-                    </div>
-                    <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">Email:</label>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <input type="email" ng-model="schoolRegCtrl.emailId" class="form-control" placeholder="enter your email id" required/>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">Pin Code:</label>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <input type="text" ng-model="schoolRegCtrl.pinCode" class="form-control" placeholder="enter your pin code"/>
-                    </div>
                     <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">Message:</label>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <textarea class="form-control" ng-model="schoolRegCtrl.message"></textarea>
+                        <textarea class="form-control" ng-model="schoolRegCtrl.schoolDetails.message"></textarea>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12"></label>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <button type="submit" class="btn btn-primary" ng-disabled="schoolReg.$invalid"
+                        <button type="submit" class="btn btn-primary"
                         ng-click="schoolRegCtrl.saveSchoolReg()">Save Your Details</button>
                     </div>
                 </div>

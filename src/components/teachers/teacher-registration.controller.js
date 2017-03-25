@@ -4,19 +4,22 @@
 'use strict';
 
 (function () {
-    angular.module('app.teachers',[])
+    angular.module('app.teacher')
         .controller('teacherRegistrationController',teacherRegistrationController);
 
-    teacherRegistrationController.$inject = [];
+    teacherRegistrationController.$inject = ['teacherRegService'];
 
-    function teacherRegistrationController() {
+    function teacherRegistrationController(teacherRegService) {
         var ctrl = this;
 
         ctrl.saveTeachersDetails = saveTeachersDetails;
 
         function saveTeachersDetails() {
-            console.log(ctrl.teacherDetails)
-            ctrl.teacherDetails.name = 'Hello '+ctrl.teacherDetails.name
+            ctrl.teacherDetails.schoolName = 'K N sharama';
+            teacherRegService.saveTeachersDetails(ctrl.teacherDetails)
+                .then(function(res){
+                    alert('Data save');
+                })
         }
     }
 })();

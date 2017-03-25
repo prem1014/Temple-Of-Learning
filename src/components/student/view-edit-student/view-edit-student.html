@@ -2,101 +2,101 @@
 
 <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <form class="form-horizontal reg-form" name="schoolReg" novalidate>
+            <form class="form-horizontal reg-form" name="schoolReg">
                 <div class="form-group">
-                    <h3>New Student</h3>
+                    <h3>View Student Details</h3>
                 </div>
                 <div class="form-group">
                     <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">Student's Name:</label>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <input type="text" class="form-control" ng-model="studentRegCtrl.studentDetails.studentName" required placeholder="Enter Student's Name"/>
+                        <input type="text" class="form-control" ng-model="viewEditStudentCtrl.studentDetails.studentName" required placeholder="Enter Student's Name"/>
                     </div>
                     <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">Class:</label>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <input type="text" class="form-control" ng-model="studentRegCtrl.studentDetails.studentClass" required placeholder="Enter Class"/>
+                        <input type="text" class="form-control" ng-model="studentDetails.studentClass" required placeholder="Enter Class"/>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">Gender:</label>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <input type="text" class="form-control" ng-model="studentRegCtrl.studentDetails.studentGender"  required/>
+                        <input type="text" class="form-control" ng-model="viewEditStudentCtrl.studentDetails.studentGender"  required/>
                     </div>
                     <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">DOB:</label>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <input type="date" class="form-control" ng-model="studentRegCtrl.studentDetails.studentDOB" required placeholder="Enter Age"/>
+                        <input type="date" class="form-control" ng-model="viewEditStudentCtrl.studentDetails.studentDOB" required placeholder="Enter Age"/>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">Father's Name:</label>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <input type="text" class="form-control" ng-model="studentRegCtrl.studentDetails.fName"  required placeholder="Enter Father's Name"/>
+                        <input type="text" class="form-control" ng-model="viewEditStudentCtrl.studentDetails.fName"  required placeholder="Enter Father's Name"/>
                     </div>
                     <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">Mother's Name:</label>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <input type="text" class="form-control" ng-model="studentRegCtrl.studentDetails.mName" required placeholder="Enter Mother's Name"/>
+                        <input type="text" class="form-control" ng-model="viewEditStudentCtrl.studentDetails.mName" required placeholder="Enter Mother's Name"/>
                     </div>
                 </div>
                  
                 <div class="form-group">
                     <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">Country:</label>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <select class="form-control" ng-model="studentRegCtrl.studentDetails.selectedCountryId" required
-                                ng-change="studentRegCtrl.onCountryChange()"
-                                ng-options="country.id as country.name for country in studentRegCtrl.country">
+                        <select class="form-control" ng-model="viewEditStudentCtrl.studentDetails.selectedCountryId" required
+                                ng-change="viewEditStudentCtrl.onCountryChange()"
+                                ng-options="country.id as country.name for country in viewEditStudentCtrl.country">
                             <option value="">--Select--</option>
                         </select>
-                        <span ng-if="studentRegCtrl.isSearchingCountry" class="glyphicon glyphicon-refresh glyphicon-spin"></span>
+                        <span ng-if="viewEditStudentCtrl.isSearchingCountry" class="glyphicon glyphicon-refresh glyphicon-spin"></span>
                     </div>
                     <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">State:</label>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <select class="form-control" ng-model="studentRegCtrl.studentDetails.selectedStateId" required
-                                ng-change="studentRegCtrl.onStateChange()"
-                                ng-options="state.id as state.name for state in studentRegCtrl.state">
+                        <select class="form-control" ng-model="viewEditStudentCtrl.studentDetails.selectedStateId" required
+                                ng-change="viewEditStudentCtrl.onStateChange()"
+                                ng-options="state.id as state.name for state in viewEditStudentCtrl.state">
                             <option value="">--Select--</option>
                         </select>
-                        <span ng-if="studentRegCtrl.isSearchingState" class="glyphicon glyphicon-refresh glyphicon-spin"></span>
+                        <span ng-if="viewEditStudentCtrl.isSearchingState" class="glyphicon glyphicon-refresh glyphicon-spin"></span>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">District:</label>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <select class="form-control" ng-model="studentRegCtrl.studentDetails.selectedDistrictId" required
-                                ng-options="district.id as district.name for district in studentRegCtrl.district"
-                                ng-change="studentRegCtrl.onDistrictChange()">
+                        <select class="form-control" ng-model="viewEditStudentCtrl.studentDetails.selectedDistrictId" required
+                                ng-options="district.id as district.name for district in viewEditStudentCtrl.district"
+                                ng-change="viewEditStudentCtrl.onDistrictChange()">
                             <option value="">--Select--</option>
                         </select>
-                        <span ng-if="studentRegCtrl.isSearchingState" class="glyphicon glyphicon-refresh glyphicon-spin"></span>
+                        <span ng-if="viewEditStudentCtrl.isSearchingState" class="glyphicon glyphicon-refresh glyphicon-spin"></span>
                     </div>
                     <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">City:</label>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <input type="text" ng-model="studentRegCtrl.studentDetails.cityName" class="form-control" placeholder="enter your city name"/>
+                        <input type="text" ng-model="viewEditStudentCtrl.studentDetails.cityName" class="form-control" placeholder="enter your city name"/>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">Mobile:</label>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <input type="text" ng-model="studentRegCtrl.studentDetails.mobileNo" class="form-control" placeholder="enter your mobile no" required/>
+                        <input type="text" ng-model="viewEditStudentCtrl.studentDetails.mobileNo" class="form-control" placeholder="enter your mobile no" required/>
                     </div>
                     <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">Email:</label>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <input type="email" ng-model="studentRegCtrl.studentDetails.emailId" class="form-control" placeholder="enter your email id" required/>
+                        <input type="email" ng-model="viewEditStudentCtrl.studentDetails.emailId" class="form-control" placeholder="enter your email id" required/>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">Pin Code:</label>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <input type="text" ng-model="studentRegCtrl.studentDetails.pinCode" class="form-control" placeholder="enter your pin code"/>
+                        <input type="text" ng-model="viewEditStudentCtrl.studentDetails.pinCode" class="form-control" placeholder="enter your pin code"/>
                     </div>
                     <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">Address:</label>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                       <textarea class="form-control" ng-model="studentRegCtrl.studentDetails.address" placeholder="Enter Address"/>></textarea>
+                       <textarea class="form-control" ng-model="viewEditStudentCtrl.studentDetails.address" placeholder="Enter Address"/>></textarea>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12"></label>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <button type="submit" class="btn btn-primary"
-                                ng-click="studentRegCtrl.saveStudentDetails()">Save Your Details</button>
+                                ng-click="viewEditStudentCtrl.saveStudentDetails()">Save Student Details</button>
                     </div>
                 </div>
             </form>

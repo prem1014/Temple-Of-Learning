@@ -16,8 +16,8 @@
 
     <title>Temple Of Learning</title>
 
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+<!--     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"> -->
 
     <!-- build:css styles/lib.css -->
     <link href="/bower_components/angular-toastr/dist/angular-toastr.css" rel="stylesheet" type="text/css">
@@ -44,7 +44,7 @@
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="header-top-right">
                         <ul class="list-unstyled">
-                            <li> <a class="login-btn-area" ui-sref="login" id="login-button"><i class="fa fa-lock" aria-hidden="true"></i> Login & Register</a>
+                            <li ng-if="!userCredentials.userName!==undefined"> <a class="login-btn-area" ui-sref="login" id="login-button"><i class="fa fa-lock" aria-hidden="true"></i> Login & Register</a>
                                 <div class="login-form" id="login-form" style="display: none;">
                                     <h1 class="title-default-left-bold">Login & Register</h1>
                                 </div>
@@ -83,7 +83,7 @@
     </header>
     <!-- end of Header Sec -->
     <div class="row" ui-view style="margin-top: 0px;">
- 
+
     </div>
     <!-- Footer section start here -->
     <footer class="row footer_area text-center">

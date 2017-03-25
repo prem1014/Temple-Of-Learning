@@ -2,63 +2,36 @@
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <form class="form-horizontal">
             <div class="form-group">
-                <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">First Name</label>
+                <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">Name</label>
                 <div class="col-lg 4 col-md-4 col-sm-4">
-                    <input type="text" class="form-control" ng-model="teacherRegCtrl.teacherDetails.name">
+                    <input type="text" class="form-control" ng-model="teacherRegCtrl.teacherDetails.teacherName">
                 </div>
-                <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">Last Name</label>
+                <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">DOB</label>
                 <div class="col-lg 4 col-md-4 col-sm-4">
-                    <input type="text" class="form-control" ng-model="teacherRegCtrl.teacherDetails.name">
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">Mobile No.</label>
-                <div class="col-lg 4 col-md-4 col-sm-4">
-                    <input type="text" class="form-control" ng-model="teacherRegCtrl.teacherDetails.mobile">
-                </div>
-                <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">Email Id</label>
-                <div class="col-lg 4 col-md-4 col-sm-4">
-                    <input type="text" class="form-control" ng-model="teacherRegCtrl.teacherDetails.email">
+                    <input type="date" class="form-control" ng-model="teacherRegCtrl.teacherDetails.teacherDOB">
                 </div>
             </div>
             <div class="form-group">
-                <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">City</label>
-                <div class="col-lg 4 col-md-4 col-sm-4">
-                    <input type="text" class="form-control" ng-model="teacherRegCtrl.teacherDetails.City">
-                </div>
-                <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">State</label>
-                <div class="col-lg 4 col-md-4 col-sm-4">
-                    <input type="text" class="form-control" ng-model="teacherRegCtrl.teacherDetails.state">
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">Pin Code</label>
-                <div class="col-lg 4 col-md-4 col-sm-4">
-                    <input type="text" class="form-control" ng-model="teacherRegCtrl.teacherDetails.pinCode">
-                </div>
                 <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">Gender</label>
                 <div class="col-lg 4 col-md-4 col-sm-4">
-                    <select class="form-control" ng-model="teacherRegCtrl.teacherDetails.gender">
-                        <option selected>Male</option>
-                        <option>Female</option>
-                    </select>
+                    <input type="text" class="form-control" ng-model="teacherRegCtrl.teacherDetails.teacherGender">
                 </div>
+<!--                <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">DOB</label>
+                <div class="col-lg 4 col-md-4 col-sm-4">
+                    <input type="date" class="form-control" ng-model="teacherRegCtrl.teacherDetails.teacherDOB">
+                </div>-->
             </div>
             <div class="form-group">
                 <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">Qualification</label>
                 <div class="col-lg 4 col-md-4 col-sm-4">
-                    <input type="text" class="form-control" ng-model="teacherRegCtrl.teacherDetails.pinCode">
+                    <input type="text" class="form-control" ng-model="teacherRegCtrl.teacherDetails.teacherQualification">
                 </div>
                 <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">Experience</label>
                 <div class="col-lg 4 col-md-4 col-sm-4">
-                    <select class="form-control" ng-model="teacherRegCtrl.teacherDetails.gender">
-                        <option selected>1 Year</option>
-                        <option>2 Year</option>
-                        <option>3 Year</option>
-                        <option>4 Year</option>
-                    </select>
+                    <text type="text" class="form-control" ng-model="teacherRegCtrl.teacherDetails.teacherExperience"></text>
                 </div>
             </div>
+            <personal-information personal-data='teacherRegCtrl.teacherDetails.personalInfo'></personal-information>
             <div class="form-group">
                <label class="control-label col-lg-2 col-md-2 col-sm-2"></label>
                 <div class="col-lg-3 col-md-3 col-sm-3">

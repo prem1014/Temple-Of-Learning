@@ -31,6 +31,7 @@
         function getAllStudents(){
             studentRegService.getAllStudents()
                 .then(function (response) {
+                    debugger
                     ctrl.allStudents = response;
                 })            
         }

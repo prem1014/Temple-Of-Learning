@@ -1,25 +1,24 @@
 /**
- * Created by abhis_000 on 3/12/2017.
+ * Created by prem on 2/10/2017.
  */
-'use strict';
-
 (function () {
-    angular.module('app.teacher')
-        .factory('teacherRegService',teacherRegService);
+    'use strict';
+    angular.module('app.student')
+        .factory('viewEditStudentService',viewEditStudentService);
 
-    teacherRegService.$inject = ['$http','$q','endPointService'];
+    viewEditStudentService.$inject = ['$http','$q','endPointService'];
 
-    function teacherRegService($http,$q,endPointService) {
+    function viewEditStudentService($http,$q,endPointService) {
         var service = {
-            saveTeachersDetails:saveTeachersDetails,
-            getAllTeachers:getAllTeachers
+            viewStudentDetails:viewStudentDetails,
+            getAllStudents:getAllStudents
         };
 
         return service;
 
-        function saveTeachersDetails(teacherDetails) {
+        function viewStudentDetails(studentDetails){
             var deferred = $q.defer();
-            $http.post(endPointService.getEndPoint('teacher'),teacherDetails)
+            $http.post(endPointService.getEndPoint('student'),studentDetails)
                 .success(function (response) {
                     deferred.resolve(response);
                 })
@@ -29,16 +28,16 @@
             return deferred.promise;
         }
 
-        function getAllTeachers() {
+        function getAllStudents(){
             var deferred = $q.defer();
-            $http.get(endPointService.getEndPoint('teacher'))
+            $http.get(endPointService.getEndPoint('student'))
                 .success(function (response) {
                     deferred.resolve(response);
                 })
                 .error(function (error) {
                     deferred.reject(error);
                 });
-            return deferred.promise;
+            return deferred.promise;            
         }
     }
 })();

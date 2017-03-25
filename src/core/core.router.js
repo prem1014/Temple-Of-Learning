@@ -54,9 +54,23 @@
             })
             .state("dashboard.student-reg",{
                 url:"/student-reg",
-                templateUrl: "/src/components/student/student-reg.html",
+                templateUrl: "/src/components/student/new-student/student-reg.html",
                 controller:'studentRegController',
                 controllerAs:'studentRegCtrl',
+                authenticate: true
+            })
+            .state("dashboard.view-edit-student",{
+                url:"/view-edit-student",
+                templateUrl: "/src/components/student/view-edit-student/view-edit-student.html",
+                controller:'viewEditStudentController',
+                controllerAs:'viewEditStudentCtrl',
+                authenticate: true
+            })
+            .state("dashboard.student-list",{
+                url:"/student-list",
+                templateUrl: "/src/components/student/student-list/student-list.html",
+                controller:'studentListController',
+                controllerAs:'studentListCtrl',
                 authenticate: true
             });
 

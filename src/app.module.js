@@ -3,10 +3,11 @@
         'app.core',
         'app.common',
         'app.login',
-        'app.schoolReg',
-        'app.schoolList',
+        'app.school',
         'app.dashboard',
-        'app.teachers',
-        'app.student'
+        'app.student',
+        'app.teacher',
+        'app.widgets',
+        'app.finance'
     ]);
 })();

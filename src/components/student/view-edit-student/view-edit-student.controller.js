@@ -3,31 +3,22 @@
  */
 
 (function () {
-    angular.module('app.student',[])
-        .controller('studentRegController',studentRegController);
+    angular.module('app.student')
+        .controller('viewEditStudentController',viewEditStudentController);
 
    
-    studentRegController.$inject=['$state','studentRegService','schoolRegService'];
+    viewEditStudentController.$inject=['$state','viewEditStudentService','schoolRegService'];
 
-    function studentRegController($state,studentRegService,schoolRegService) {
+    function viewEditStudentController($state,viewEditStudentService,schoolRegService) {
     	var ctrl =this;
 
-    	ctrl.saveStudentDetails = saveStudentDetails;
+    	
         ctrl.onCountryChange = onCountryChange;
         ctrl.onStateChange = onStateChange;
         ctrl.onDistrictChange = onDistrictChange;
+        ctrl.getAllStudents=getAllStudents;
 
         onInit();
-
-    	function saveStudentDetails(){
-            ctrl.studentDetails.schoolName = 'K N sharama'
-    		studentRegService.saveStudentDetails(ctrl.studentDetails)
-    		   .then(function(response){
-                   alert('data saved');
-                   $state.go('dashboard');
-    		   })
-            }
-
 
         function onCountryChange() {
             getStateByCountryId();
@@ -116,10 +107,27 @@
                     ctrl.isSearchingDistrict =false;
                 });
         }
+         function getAllStudents() {
+            ctrl.isSearchingCountry = true;
+            viewEditStudentService.getAllStudents() 
+                .then(function (response) {
+                    _.forEach(response,function (data) {
+                        if(data!==null){
+                            ctrl.studentDetails=data;
+                        }
+                        ctrl.isSearchingCountry = false;
+                    });
+                })
+                .catch(function (error) {
+                    console.log('error')
+                    ctrl.isSearchingCountry = false;
+                });
+        }
 
         function onInit() {
             ctrl.country = [];
             getAllCountry();
+            getAllStudents(); 
         }
     }
 })();
