@@ -47,7 +47,7 @@
         })
             .state("dashboard.student-reg",{
                 url:"/student-reg",
-                templateUrl: "/src/components/student/student-reg.html",
+                templateUrl: "/src/components/student/new-student/student-reg.html",
                 controller:'studentRegController',
                 controllerAs:'studentRegCtrl',
                 authenticate: true

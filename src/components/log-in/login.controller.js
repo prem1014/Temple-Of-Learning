@@ -23,6 +23,9 @@
                         $rootScope.userCredentials = $cookieStore.get('userCredentials') || {};
                         $state.go('dashboard')
                     }
+                    else{
+                        ctrl.inIncorrectCredentials = true;
+                    }
                 })
                 .catch(function (error) {
 
