@@ -1,0 +1,13 @@
+<div class="data-grid-container">
+    <div class="data-grid-header" >
+
+        <div ng-repeat="colDef in vm.gridOptions.columnDefinition" style="display:inline-block;padding:10px;">
+            {{colDef.headerName}}
+        </div>
+    </div>
+    <div class="row-container" ng-repeat="(rowIndex,rowData) in vm.gridOptions.rowData">
+        <div ng-repeat="(colIndex,colDef) in vm.gridOptions.columnDefinition" style="display:inline-block;padding:10px;">
+            {{rowData[colDef.field]}}
+        </div>
+    </div>
+</div>
