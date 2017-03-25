@@ -10,8 +10,13 @@
     function studentListController($scope,studentRegService) {
     	var ctrl = this;
 
+    	ctrl.onRowClick = onRowClick;
+
     	onInit();
 
+    	function onRowClick(){
+    	     alert('row clicked')
+    	}
     	function getAllStudents(){
     		studentRegService.getAllStudents()
     		.then(function(response){
@@ -35,16 +40,16 @@
     		          headerName:'Date Of Birth',field:'studentDOB'
     		     },
     		     {
-    		          headerName:'Name',field:'name'
+    		          headerName:'Gender',field:'studentGender'
     		     },
     		     {
-    		          headerName:'Name',field:'name'
+    		          headerName:'State',field:'stateName'
     		     },
     		     {
-    		          headerName:'Name',field:'name'
+    		          headerName:'District',field:'districtName'
     		     },
     		     {
-    		          headerName:'Name',field:'name'
+    		          headerName:'Mobile No',field:'mobileNo'
     		     },
     		]
 

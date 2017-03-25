@@ -11,7 +11,8 @@
                controllerAs:'vm',
                bindToController:true,
                scope:{
-                   gridOptions:'='
+                   gridOptions:'=',
+                   onRowClick:'&'
                }
           }
           return directive;

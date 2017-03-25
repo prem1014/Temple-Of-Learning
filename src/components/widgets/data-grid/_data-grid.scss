@@ -1,0 +1,31 @@
+.data-grid-container{
+border-right: 1px solid rgb(209, 209, 212);
+border-left: 1px solid rgb(209, 209, 212);
+border-bottom: 1px solid rgb(209, 209, 212);
+}
+.data-grid-header{
+position: relative;
+    padding: 5px;
+    background-color: rgb(209, 209, 212);
+}
+.data-grid-header div{
+display:inline-block;
+padding:5px;
+width:120px;
+}
+.row-container{
+    height:30px;
+    cursor:pointer;
+}
+.row-container div{
+    display:inline-block;
+    padding:5px;
+    width:120px;
+}
+
+.row-container:hover{
+     background-color:#d7f9fd;
+}
+.rowClicked{
+  background-color:red;
+}
