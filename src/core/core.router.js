@@ -60,10 +60,10 @@
                 authenticate: true
             })
             .state("dashboard.view-edit-student",{
-                url:"/view-edit-student",
+                url:"/view-edit-student/{studentId}",
                 templateUrl: "/src/components/student/view-edit-student/view-edit-student.html",
                 controller:'viewEditStudentController',
-                controllerAs:'viewEditStudentCtrl',
+                controllerAs:'vm',
                 authenticate: true
             })
             .state("dashboard.student-list",{

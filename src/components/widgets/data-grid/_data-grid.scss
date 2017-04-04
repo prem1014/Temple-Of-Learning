@@ -1,7 +1,6 @@
 .data-grid-container{
 border-right: 1px solid rgb(209, 209, 212);
 border-left: 1px solid rgb(209, 209, 212);
-border-bottom: 1px solid rgb(209, 209, 212);
 }
 .data-grid-header{
 position: relative;
@@ -12,10 +11,13 @@ position: relative;
 display:inline-block;
 padding:5px;
 width:120px;
+height: 40px;
 }
 .row-container{
-    height:30px;
-    cursor:pointer;
+    height: 40px;
+    cursor: pointer;
+    background-color: #eff6f9;
+    border-bottom: 1px solid rgb(209, 209, 212);
 }
 .row-container div{
     display:inline-block;
@@ -27,5 +29,5 @@ width:120px;
      background-color:#d7f9fd;
 }
 .rowClicked{
-  background-color:red;
+  background-color:#009688;
 }

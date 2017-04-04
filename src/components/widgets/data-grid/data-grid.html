@@ -4,10 +4,13 @@
             {{colDef.headerName}}
         </div>
     </div>
-    <div class="row-container" ng-repeat="(rowIndex,rowData) in vm.gridOptions.rowData" ng-click="vm.onRowClick()"
-         ng-class="{rowClicked:vm.isRowClicked==true}">
-        <div ng-repeat="(colIndex,colDef) in vm.gridOptions.columnDefinition">
-            {{rowData[colDef.field] | date:"MM-dd-yyyy"}}
+    <div ng-repeat="(rowIndex,rowData) in vm.gridOptions.rowData">
+        <div class="row-container" ng-click="vm.onRowClick({rowData:rowData});rowData.isRowClicked=!rowData.isRowClicked"
+             ng-class="{rowClicked:rowData.isRowClicked==true}">
+            <div ng-repeat="(colIndex,colDef) in vm.gridOptions.columnDefinition">
+                {{rowData[colDef.field] | date:"MM-dd-yyyy"}}
+            </div>
         </div>
     </div>
+
 </div>

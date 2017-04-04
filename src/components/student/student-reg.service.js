@@ -11,7 +11,8 @@
     function studentRegService($http,$q,endPointService) {
         var service = {
             saveStudentDetails:saveStudentDetails,
-            getAllStudents:getAllStudents
+            getAllStudents:getAllStudents,
+            getStudentDetailsById:getStudentDetailsById
         };
 
         return service;
@@ -37,7 +38,19 @@
                 .error(function (error) {
                     deferred.reject(error);
                 });
-            return deferred.promise;            
+            return deferred.promise;
+        }
+
+        function getStudentDetailsById(id){
+            var deferred = $q.defer();
+            $http.get(endPointService.getEndPoint('student'+'/'+id))
+                .success(function (response) {
+                    deferred.resolve(response);
+                })
+                .error(function (error) {
+                    deferred.reject(error);
+                });
+            return deferred.promise;
         }
     }
 })();

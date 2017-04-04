@@ -5,17 +5,18 @@
     angular.module('app.student')
         .controller('studentListController',studentListController);
 
-    studentListController.$inject = ['$scope','studentRegService'];
+    studentListController.$inject = ['$scope','$state','studentRegService'];
 
-    function studentListController($scope,studentRegService) {
+    function studentListController($scope,$state,studentRegService) {
     	var ctrl = this;
 
     	ctrl.onRowClick = onRowClick;
 
     	onInit();
 
-    	function onRowClick(){
-    	     alert('row clicked')
+    	function onRowClick(rowData){
+    	     $state.go('dashboard.view-edit-student',{studentId:rowData._id});
+    	     console.log(rowData);
     	}
     	function getAllStudents(){
     		studentRegService.getAllStudents()

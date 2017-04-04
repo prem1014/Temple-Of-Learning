@@ -23,8 +23,9 @@
             ctrl.personalData.state.name =
              getSateNameById(ctrl.personalData.state.selectedStateId,ctrl.personalData.state.allState);
         }
+
         function onDistrictChange(){
-            ctrl.personalData.district.name = 
+            ctrl.personalData.district.name =
             getDistrictNameById(ctrl.personalData.district.selectedDistrictId,ctrl.personalData.district.allDistrict);
         }
 
@@ -42,7 +43,13 @@
                                 }
                             )
                         }
-                    });  
+                    });
+                    if(ctrl.personalData.country.selectedCountryId){
+                        onCountryChange();
+                    }
+                    if(ctrl.personalData.state.selectedStateId){
+                        onStateChange();
+                    }
                  })
          }
 
@@ -113,6 +120,7 @@
 
             return districtDetails.name;
         }
+
          function onInit(){
              if(ctrl.personalData===undefined){
                  ctrl.personalData = {
@@ -128,7 +136,12 @@
                          allDistrict:[],
                          selectedDistrictId:null
                      }
-                 }                
+                 }
+             }
+             else{
+             ctrl.personalData.country.allCountry = [];
+             ctrl.personalData.state.allState = [];
+             ctrl.personalData.district.allDistrict = [];
              }
             getAllCountry();
          }

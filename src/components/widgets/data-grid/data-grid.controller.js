@@ -8,6 +8,7 @@
          onInit();
          function onInit(){
              console.log(ctrl.gridOptions)
+             ctrl.gridOptions.rowData.isRowClicked = false;
          }
      }
 
