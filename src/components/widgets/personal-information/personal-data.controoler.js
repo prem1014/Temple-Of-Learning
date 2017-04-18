@@ -47,9 +47,6 @@
                     if(ctrl.personalData.country.selectedCountryId){
                         onCountryChange();
                     }
-                    if(ctrl.personalData.state.selectedStateId){
-                        onStateChange();
-                    }
                  })
          }
 
@@ -68,6 +65,9 @@
                         }
                         ctrl.isSearchingState = false;
                     });
+                    if(ctrl.personalData.state.selectedStateId){
+                         onStateChange();
+                    }
                 })
                 .catch(function (error) {
                     console.log('error')

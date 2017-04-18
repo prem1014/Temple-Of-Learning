@@ -22,44 +22,29 @@
     		studentRegService.getAllStudents()
     		.then(function(response){
     			ctrl.studentList = response;
-    			initGrid(ctrl.studentList);
+    			ctrl.isSearching = false;
+    			ctrl.gridOptions.api.setRowData(response);
     		})
     	}
 
     	function initGrid(rowData){
-    		var columnDefinition = [
-    		     {
-    		          headerName:'Name',field:'studentName'
-    		     },
-    		     {
-    		          headerName:'Father Name',field:'fName'
-    		     },
-    		     {
-    		          headerName:'Mother Name',field:'mName'
-    		     },
-    		     {
-    		          headerName:'Date Of Birth',field:'studentDOB'
-    		     },
-    		     {
-    		          headerName:'Gender',field:'studentGender'
-    		     },
-    		     {
-    		          headerName:'State',field:'stateName'
-    		     },
-    		     {
-    		          headerName:'District',field:'districtName'
-    		     },
-    		     {
-    		          headerName:'Mobile No',field:'mobileNo'
-    		     },
-    		]
+    		    var columnDefs = [
+                    {headerName: "Id", field: "_id"},
+                    {headerName: "Name", field: "studentName"},
+                    {headerName: "Father Name", field: "fName"},
+                    {headerName: "Mother Name", field: "mName"},
+                    {headerName: "City", field: "personalInfo.cityName"},
+                    {headerName: "District", field: "personalInfo.district.name"},
+                    {headerName: "State", field: "personalInfo.state.name"},
+                    {headerName: "Address", field: "personalInfo.address"}
+                ];
 
-    		ctrl.gridOptions = {
-    		     columnDefinition:columnDefinition,
-    		     rowData:rowData
-    		}
+                ctrl.gridOptions = {
+                    columnDefs: columnDefs
+                };
     	}
     	function onInit(){
+          	initGrid();
     		getAllStudents();
     	}
     }

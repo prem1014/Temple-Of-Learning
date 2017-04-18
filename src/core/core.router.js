@@ -70,7 +70,7 @@
                 url:"/student-list",
                 templateUrl: "/src/components/student/student-list/student-list.html",
                 controller:'studentListController',
-                controllerAs:'studentListCtrl',
+                controllerAs:'vm',
                 authenticate: true
             });
 

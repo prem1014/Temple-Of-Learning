@@ -7,31 +7,31 @@
                 <div class="form-group">
                     <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">Student's Name:</label>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <input type="text" class="form-control" ng-model="viewEditStudentCtrl.studentDetails.studentName" required placeholder="Enter Student's Name"/>
+                        <input type="text" class="form-control" ng-model="vm.studentDetails.studentName" required placeholder="Enter Student's Name"/>
                     </div>
                     <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">Class:</label>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <input type="text" class="form-control" ng-model="studentDetails.studentClass" required placeholder="Enter Class"/>
+                        <input type="text" class="form-control" ng-model="vm.studentDetails.studentClass" required placeholder="Enter Class"/>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">Gender:</label>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <input type="text" class="form-control" ng-model="viewEditStudentCtrl.studentDetails.studentGender"  required/>
+                        <input type="text" class="form-control" ng-model="vm.studentDetails.studentGender"  required/>
                     </div>
                     <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">DOB:</label>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <input type="date" class="form-control" ng-model="viewEditStudentCtrl.studentDetails.studentDOB" required placeholder="Enter Age"/>
+                        <input type="date" class="form-control" ng-model="vm.studentDetails.studentDOB" required placeholder="Enter Age"/>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">Father's Name:</label>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <input type="text" class="form-control" ng-model="viewEditStudentCtrl.studentDetails.fName"  required placeholder="Enter Father's Name"/>
+                        <input type="text" class="form-control" ng-model="vm.studentDetails.fName"  required placeholder="Enter Father's Name"/>
                     </div>
                     <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">Mother's Name:</label>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <input type="text" class="form-control" ng-model="viewEditStudentCtrl.studentDetails.mName" required placeholder="Enter Mother's Name"/>
+                        <input type="text" class="form-control" ng-model="vm.studentDetails.mName" required placeholder="Enter Mother's Name"/>
                     </div>
                 </div>
                 <personal-information personal-data='vm.studentDetails.personalInfo' ng-if="vm.isSearchCompleted"></personal-information>

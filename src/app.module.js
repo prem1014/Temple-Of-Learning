@@ -1,5 +1,8 @@
+agGrid.initialiseAgGridWithAngular1(angular);
 (function(){
+
     angular.module('templeOfLearning.app',[
+        'agGrid',
         'app.core',
         'app.common',
         'app.login',

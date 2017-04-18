@@ -61,11 +61,34 @@
     		schoolRegService.getAllSchool()
     		.then(function(response){
     			ctrl.schoolList = response;
+    			ctrl.isSearching = false;
+    			ctrl.gridOptions.api.setRowData(response);
     		})
     	}
-
+ $scope.deleteRecord = function(params,rowIndex){
+     //delete from map using index
+     // map.splice(1,rowIndex);
+     alert('delete')
+ }
     	function onInit(){
     		getAllSchool();
+    		    var columnDefs = [
+                    {headerName: "School Id", field: "_id"},
+                    {headerName: "School Name", field: "schoolName"},
+                    {headerName: "City", field: "cityName"},
+                    {headerName: "State", field: "stateName"},
+                    {headerName: "Status", field: "currentStatus"}
+                ];
+
+                ctrl.gridOptions = {
+                    columnDefs: columnDefs
+                };
+
+                function rejectRequest(params){
+                    var html =
+                    '<button title="Remove" ng-click="alert(' + params+ ')">Reject</button>';
+                    return html;
+                }
     	}
     }
 })();

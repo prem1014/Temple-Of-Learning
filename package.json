@@ -4,16 +4,17 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-        "body-parser": "^1.13.1",
-        "compression": "^1.6.0",
-        "connect-modrewrite": "^0.8.1",
-        "cors": "^2.7.1",
-        "express": "^4.13.0",
-        "morgan": "^1.6.0",
-        "process-nextick-args": "^1.0.7"
-    },
+    "body-parser": "^1.13.1",
+    "compression": "^1.6.0",
+    "connect-modrewrite": "^0.8.1",
+    "cors": "^2.7.1",
+    "express": "^4.13.0",
+    "morgan": "^1.6.0",
+    "process-nextick-args": "^1.0.7"
+  },
   "devDependencies": {
-       "browser-sync": "^2.9.11",
+    "ag-grid": "^9.0.3",
+    "browser-sync": "^2.9.11",
     "chai": "^3.0.0",
     "chai-as-promised": "^5.1.0",
     "chalk": "^1.0.1",
